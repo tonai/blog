@@ -1,48 +1,48 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Tony Cabaye',
-  tagline: 'Frontend expert',
-  favicon: 'img/favicon.ico', // TODO
+  title: "Tony Cabaye",
+  tagline: "Frontend expert",
+  favicon: "img/favicon.ico", // TODO
 
   // Set the production url of your site here
-  url: 'https://tonai.github.io',
+  url: "https://tonai.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/blog/',
+  baseUrl: "/blog/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'tonai', // Usually your GitHub org/user name.
-  projectName: 'blog', // Usually your repo name.
+  organizationName: "tonai", // Usually your GitHub org/user name.
+  projectName: "blog", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         // Will be passed to @docusaurus/plugin-content-blog
         blog: {
           archiveBasePath: null,
-          blogSidebarCount: 'ALL',
+          blogSidebarCount: "ALL",
           postsPerPage: 10,
-          routeBasePath: 'posts',
+          routeBasePath: "posts",
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -59,7 +59,7 @@ const config = {
         // Will be passed to @docusaurus/plugin-sitemap
         // sitemap: {},
         theme: {
-          customCss: require.resolve('./src/css/custom.css'), // TODO
+          customCss: require.resolve("./src/css/custom.css"), // TODO
         },
       }),
     ],
@@ -69,39 +69,37 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg', // TODO
-      metadata: [
-        {name: 'keywords', content: 'Tony Cabaye, blog'},
-      ],
+      image: "img/docusaurus-social-card.jpg", // TODO
+      metadata: [{ name: "keywords", content: "Tony Cabaye, blog" }],
       navbar: {
-        title: 'Tony Cabaye',
+        title: "Tony Cabaye",
         logo: {
-          alt: 'Tony Cabaye Logo',
-          src: 'img/logo.svg', // TODO
+          alt: "Tony Cabaye Logo",
+          src: "img/logo.svg", // TODO
         },
         items: [
-          {to: 'posts', label: 'Recent posts', position: 'left'},
+          { to: "posts", label: "Recent posts", position: "left" },
           {
-            href: 'https://www.linkedin.com/in/tony-cabaye/',
-            label: 'LinkedIn',
-            position: 'right',
+            href: "https://www.linkedin.com/in/tony-cabaye/",
+            label: "LinkedIn",
+            position: "right",
           },
           {
-            href: 'https://github.com/tonai',
-            label: 'Github',
-            position: 'right',
+            href: "https://github.com/tonai",
+            label: "Github",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Blog',
+            title: "Blog",
             items: [
               {
-                label: 'Recent posts',
-                to: 'posts',
+                label: "Recent posts",
+                to: "posts",
               },
             ],
           },
@@ -123,19 +121,19 @@ const config = {
           //   ],
           // },
           {
-            title: 'Links',
+            title: "Links",
             items: [
               {
-                label: 'LinkedIn',
-                to: 'https://www.linkedin.com/in/tony-cabaye/',
+                label: "LinkedIn",
+                to: "https://www.linkedin.com/in/tony-cabaye/",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/tonai',
+                label: "GitHub",
+                href: "https://github.com/tonai",
               },
               {
-                label: 'X',
-                href: 'https://twitter.com/CabayeTony',
+                label: "X",
+                href: "https://twitter.com/CabayeTony",
               },
             ],
           },
