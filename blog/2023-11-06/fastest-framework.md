@@ -21,27 +21,27 @@ So, if you're planning to determine the best front-end framework for your requir
 
 In this article, our primary focus will be on comparing the performance of the following frameworks:
 
-*   Client Side Rendering (CSR):
-    *   Angular
-    *   React
-    *   Solid
-    *   Vue
-*   Server Side Rendering (SSR):
-    *   Astro
-    *   Astro + React
-    *   Gatsby
-    *   Next (app router)
-    *   Next (page router)
-    *   Nuxt
-    *   Qwik
-    *   Remix
-    *   Sveltekit
+- Client Side Rendering (CSR):
+  - Angular
+  - React
+  - Solid
+  - Vue
+- Server Side Rendering (SSR):
+  - Astro
+  - Astro + React
+  - Gatsby
+  - Next (app router)
+  - Next (page router)
+  - Nuxt
+  - Qwik
+  - Remix
+  - Sveltekit
 
 Throughout the article, we will cover the following topics:
 
-*   Benchmarking the page load times of identical pages implemented in various frameworks.
-*   Evaluating the reactivity performance of these frameworks.
-*   Providing a summary and drawing conclusions regarding the fastest frameworks.
+- Benchmarking the page load times of identical pages implemented in various frameworks.
+- Evaluating the reactivity performance of these frameworks.
+- Providing a summary and drawing conclusions regarding the fastest frameworks.
 
 ## Introduction
 
@@ -59,11 +59,11 @@ Now, let's delve into the results of each scenario, utilizing the most optimal a
 
 ## Glossary
 
-*   **FCP**: First Contentful Paint - First Contentful Paint marks the time when the first text or image is painted.
-*   **LCP**: Largest Contentful Paint - Largest Contentful Paint marks the time when the largest text or image is painted.
-*   **TBT**: Total Blocking Time - The sum of all time periods between FCP and Time to Interactive, when a task length exceeds 50ms, expressed in milliseconds.
-*   **CLS**: Cumulative Layout Shift - Cumulative Layout Shift measures the movement of visible elements within the viewport.
-*   **SI**: Speed Index - Speed Index shows how quickly the contents of a page are visibly populated.
+- **FCP**: First Contentful Paint - First Contentful Paint marks the time when the first text or image is painted.
+- **LCP**: Largest Contentful Paint - Largest Contentful Paint marks the time when the largest text or image is painted.
+- **TBT**: Total Blocking Time - The sum of all time periods between FCP and Time to Interactive, when a task length exceeds 50ms, expressed in milliseconds.
+- **CLS**: Cumulative Layout Shift - Cumulative Layout Shift measures the movement of visible elements within the viewport.
+- **SI**: Speed Index - Speed Index shows how quickly the contents of a page are visibly populated.
 
 ## Lighthouse benchmark
 
@@ -99,9 +99,9 @@ Here is a chart illustrating these differences (sorted by total size):
 
 Here are some notable points to consider:
 
-*   The document size of CSR (Client Side Rendering) frameworks (Angular, React, Solid, and Vue) is minimal, at only around 1kB, because it's mostly empty due to the content being generated on the client side.
-*   Certain frameworks, such as Astro, Qwik, Remix, and Sveltekit, do not include any JS files.
-*   The JS size appears to be 0 for some cases, but in reality, there is still some JavaScript embedded in the document. This is why the document size varies among SSR (Server Side Rendering) frameworks.
+- The document size of CSR (Client Side Rendering) frameworks (Angular, React, Solid, and Vue) is minimal, at only around 1kB, because it's mostly empty due to the content being generated on the client side.
+- Certain frameworks, such as Astro, Qwik, Remix, and Sveltekit, do not include any JS files.
+- The JS size appears to be 0 for some cases, but in reality, there is still some JavaScript embedded in the document. This is why the document size varies among SSR (Server Side Rendering) frameworks.
 
 With these observations in mind, we are ready to delve deeper into our analysis.
 
@@ -167,11 +167,11 @@ To potentially witness a more substantial difference between the frameworks, we 
 
 In this scenario, I've built upon the previous one by incorporating five API calls to fetch data:
 
-*   Four API calls are utilized to load data for the content, with the data fetched on the server for SSR frameworks and on the client for CSR frameworks.
-*   One API call is dedicated to loading the data for the map, and this call is always executed on the client side.
-*   To mimic a slower API response, I've introduced a 1-second delay for each API call.
-*   The four API calls for content are independent of one another, enabling them to be fetched in parallel.
-*   Whenever possible, I tested both SSR and SSG rendering techniques for SSR frameworks.
+- Four API calls are utilized to load data for the content, with the data fetched on the server for SSR frameworks and on the client for CSR frameworks.
+- One API call is dedicated to loading the data for the map, and this call is always executed on the client side.
+- To mimic a slower API response, I've introduced a 1-second delay for each API call.
+- The four API calls for content are independent of one another, enabling them to be fetched in parallel.
+- Whenever possible, I tested both SSR and SSG rendering techniques for SSR frameworks.
 
 Results (with Chrome 116.0.5845.96):
 
@@ -228,10 +228,10 @@ Results (with Chrome 116.0.5845.96):
 
 In this scenario, we indeed begin to witness significant differences:
 
-*   CSR frameworks exhibit lower scores, ranging from 26 to 32, with variations across different test batches, underscoring tangible distinctions between these frameworks.
-*   In SSR cases, there's about a 5-point drop in scores due to an increase in the SI metric. This suggests that a prolonged TTFB (Time To First Byte) can have a minor impact on the Lighthouse score compared to the time spent on the client side.
-*   Remix cannot perform SSG, but Gatsby and Next can, which means that in some instances, these frameworks can transition to SSG to mitigate the impact of the lengthy calculation.
-*   SSG frameworks, apart from Sveltekit, do not experience any significant impact from the calculation since it's performed during the build process. However, Sveltekit's score is similar to CSR frameworks, as it primarily does the long calculation on the client side.
+- CSR frameworks exhibit lower scores, ranging from 26 to 32, with variations across different test batches, underscoring tangible distinctions between these frameworks.
+- In SSR cases, there's about a 5-point drop in scores due to an increase in the SI metric. This suggests that a prolonged TTFB (Time To First Byte) can have a minor impact on the Lighthouse score compared to the time spent on the client side.
+- Remix cannot perform SSG, but Gatsby and Next can, which means that in some instances, these frameworks can transition to SSG to mitigate the impact of the lengthy calculation.
+- SSG frameworks, apart from Sveltekit, do not experience any significant impact from the calculation since it's performed during the build process. However, Sveltekit's score is similar to CSR frameworks, as it primarily does the long calculation on the client side.
 
 This example effectively demonstrates that having a long calculation on the server is generally more favorable. However, in most real-life projects, such an exact scenario may not occur. The most common scenario where time is consumed by JavaScript is during the rendering of your components. Let's proceed to the next scenario.
 
@@ -258,11 +258,11 @@ SSR framework results (with Chrome 116.0.5845.96):
 
 In this scenario, several important observations can be made:
 
-*   The impact of hydration is evident and significantly reduces the scores for both SSR and SSG rendering techniques to a level similar to that of CSR frameworks. This is because the lengthy calculation occurs solely on the client for SSG, while for SSR, it happens on both the server and the client.
-*   Astro without React uses plain JS, avoiding the need for hydration, resulting in no significant impact on the Lighthouse score.
-*   The client:visible directive in Astro can be used to lazily load framework components. This means that the long calculation only occurs when the component enters the viewport, having no detrimental effect on the Lighthouse score (in this case).
-*   In the case of Next (using the app router), the lengthy calculation is placed inside a React server component, which is not hydrated. As a result, the calculation takes place exclusively on the server side, minimizing the impact of component hydration.
-*   Qwik's "resumability" technique ensures that no calculation occurs on the client side because it has already been executed on the server, further optimizing performance.
+- The impact of hydration is evident and significantly reduces the scores for both SSR and SSG rendering techniques to a level similar to that of CSR frameworks. This is because the lengthy calculation occurs solely on the client for SSG, while for SSR, it happens on both the server and the client.
+- Astro without React uses plain JS, avoiding the need for hydration, resulting in no significant impact on the Lighthouse score.
+- The client:visible directive in Astro can be used to lazily load framework components. This means that the long calculation only occurs when the component enters the viewport, having no detrimental effect on the Lighthouse score (in this case).
+- In the case of Next (using the app router), the lengthy calculation is placed inside a React server component, which is not hydrated. As a result, the calculation takes place exclusively on the server side, minimizing the impact of component hydration.
+- Qwik's "resumability" technique ensures that no calculation occurs on the client side because it has already been executed on the server, further optimizing performance.
 
 These findings shed light on the different approaches and their implications for frontend framework performance under varying circumstances.
 
@@ -306,7 +306,7 @@ With this solution, we are now prepared to compare the reactivity of different f
 
 I didn't implement the reactivity benchmark for all frameworks because Next, Gatsby, Remix, and others all rely on React. I only implemented it when the frontend framework was something other than React.
 
-So, here's the ranking of how many renders these frameworks can perform in one second, from best to worst:  
+So, here's the ranking of how many renders these frameworks can perform in one second, from best to worst:
 
 | Framework           |  Render |
 | ------------------- | ------: |
@@ -334,11 +334,11 @@ Let's calculate some score based on the maximum score:
 
 Here are some noteworthy points:
 
-*   It's quite reassuring to see that native JavaScript implementation is the top performer.
-*   The Solid reactivity system is designed with a focus on speed (you can learn more about it here: https://www.solidjs.com/guides/reactivity)
-*   Svelte, while not exactly a framework, compiles to native JavaScript in an efficient manner.
-*   React's performance can vary significantly, from being the worst-performing framework to being more than 10 times better, depending on how you define the state in your application.
-*   Angular's results are subpar due to the necessity of reintegrating messages from the MessageChannel into the Angular flow using NgZone.
+- It's quite reassuring to see that native JavaScript implementation is the top performer.
+- The Solid reactivity system is designed with a focus on speed (you can learn more about it here: https://www.solidjs.com/guides/reactivity)
+- Svelte, while not exactly a framework, compiles to native JavaScript in an efficient manner.
+- React's performance can vary significantly, from being the worst-performing framework to being more than 10 times better, depending on how you define the state in your application.
+- Angular's results are subpar due to the necessity of reintegrating messages from the MessageChannel into the Angular flow using NgZone.
 
 You can also refer to this benchmark page, which compares various frameworks in different scenarios, but the overall conclusions remain consistent.
 
@@ -348,15 +348,15 @@ You can also refer to this benchmark page, which compares various frameworks in 
 
 Here are some general points to consider before delving into the conclusions for each framework:
 
-*   Lighthouse primarily records frontend performance, and backend requests have a minimal impact on the score.
-*   This implies that you must focus on optimizing your backend independently, either by yourself or with other tools, to ensure your server is fast and provides the best user experience.
-*   Overall, SSR (Server-Side Rendering) frameworks perform slightly better than CSR (Client-Side Rendering) frameworks, although the difference is not substantial.
-*   This suggests that CSR frameworks are still viable options when building applications like Back-Office systems, intranets, extranets, connected apps, and so on (but avoid using CSR frameworks if SEO is a concern).
-*   While there are no significant variations among CSR frameworks in the page load benchmark, there are notable differences in terms of reactivity.
+- Lighthouse primarily records frontend performance, and backend requests have a minimal impact on the score.
+- This implies that you must focus on optimizing your backend independently, either by yourself or with other tools, to ensure your server is fast and provides the best user experience.
+- Overall, SSR (Server-Side Rendering) frameworks perform slightly better than CSR (Client-Side Rendering) frameworks, although the difference is not substantial.
+- This suggests that CSR frameworks are still viable options when building applications like Back-Office systems, intranets, extranets, connected apps, and so on (but avoid using CSR frameworks if SEO is a concern).
+- While there are no significant variations among CSR frameworks in the page load benchmark, there are notable differences in terms of reactivity.
 
 ### Qwik
 
-Taking the results into account, the Qwik framework appears to be performing exceptionally well, especially when you aggregate all the Lighthouse scenario scores in one place:  
+Taking the results into account, the Qwik framework appears to be performing exceptionally well, especially when you aggregate all the Lighthouse scenario scores in one place:
 
 | Scenario                                 | Score |
 | ---------------------------------------- | ----- |
@@ -396,7 +396,7 @@ It's important to note that the reactivity of the framework will depend on the s
 
 ### Next / Gatsy / Remix / Nuxt
 
-Here's a summary of the scores for Next, Gatsby, Remix, and Nuxt:  
+Here's a summary of the scores for Next, Gatsby, Remix, and Nuxt:
 
 | Scenario                                 | Next (app routing)  | Next (page routing) | Gatsby              | Remix    | Nuxt     |
 | ---------------------------------------- | ------------------- | ------------------- | ------------------- | -------- | -------- |
@@ -411,11 +411,11 @@ Based on these results, we can conclude that in most scenarios, these frameworks
 
 Next stands out when it uses app routing (and, consequently, React Server Component) and performs better in situations where a server component needs to perform complex calculations. However, in practice, such cases might not be very common because these calculations often rely on frontend state and need to be recalculated on the client side.
 
-Nonetheless, if you encounter performance issues, utilizing Next with React Server Side Rendering could be a favorable choice. It not only has the potential to improve performance in specific scenarios but also reduces the overall number of hydrated components. Therefore, if you're looking to employ React with Server Side Rendering, Next is likely one of the top choices.  
+Nonetheless, if you encounter performance issues, utilizing Next with React Server Side Rendering could be a favorable choice. It not only has the potential to improve performance in specific scenarios but also reduces the overall number of hydrated components. Therefore, if you're looking to employ React with Server Side Rendering, Next is likely one of the top choices.
 
 ### SvelteKit
 
-Lighthouse Score results for SvelteKit:  
+Lighthouse Score results for SvelteKit:
 
 | Scenario                                 | Score    |
 | ---------------------------------------- | -------- |
@@ -432,7 +432,7 @@ However, the reactivity system is highly effective, scoring 71 out of 100\. Over
 
 ### React / Vue / Angular / Solid
 
-Here's a summary of the scores for these frameworks:  
+Here's a summary of the scores for these frameworks:
 
 | Scenario                                 | Angular | React | Solid | Vue |
 | ---------------------------------------- | ------- | ----- | ----- | --- |
@@ -454,7 +454,7 @@ Furthermore, if you encounter performance issues, you're likely to find solution
 
 Nonetheless, here are the final results:
 
-*   **Qwik** stands out with its impressive resumable hydration system, as it appears to be optimized by default. This could be an excellent choice for projects that require building everything from scratch and don't heavily rely on external libraries. It's worth noting that the Qwik ecosystem and community are relatively new.
-*   **Astro** offers strong performance and allows you to select your preferred framework. However, its island architecture might not be suitable for all projects. Consider using it if you only need interactivity in specific parts of your website.
-*   **Next** would likely be the default choice for projects that don't fall into the aforementioned categories.
-*   **Solid** boasts the best reactivity, but like Qwik, its ecosystem is still emerging. It might be worth exploring in scenarios where SEO isn't a primary concern (though SolidStart offers SSR, it's still in beta) and where you don't heavily rely on external libraries.
+- **Qwik** stands out with its impressive resumable hydration system, as it appears to be optimized by default. This could be an excellent choice for projects that require building everything from scratch and don't heavily rely on external libraries. It's worth noting that the Qwik ecosystem and community are relatively new.
+- **Astro** offers strong performance and allows you to select your preferred framework. However, its island architecture might not be suitable for all projects. Consider using it if you only need interactivity in specific parts of your website.
+- **Next** would likely be the default choice for projects that don't fall into the aforementioned categories.
+- **Solid** boasts the best reactivity, but like Qwik, its ecosystem is still emerging. It might be worth exploring in scenarios where SEO isn't a primary concern (though SolidStart offers SSR, it's still in beta) and where you don't heavily rely on external libraries.
