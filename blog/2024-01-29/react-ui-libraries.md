@@ -7,7 +7,7 @@ tags: [frontend, react, library]
 ---
 
 <head>
-  <link rel="canonical" href="https://blog.smile.eu/en/digital/best-react-ui-library" />
+  <link rel="canonical" href="https://smile.eu/en/publications-and-events/best-react-ui-library" />
 </head>
 
 The React community stands out as one of the largest, but navigating through the multitude of libraries to find the right one that truly adds value to your business can be a challenging task.

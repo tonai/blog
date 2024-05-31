@@ -6,9 +6,9 @@ authors: tonai
 tags: [frontend, frameworks]
 ---
 
-<head>
+<!-- <head>
   <link rel="canonical" href="https://blog.smile.eu/en/digital/how-choose-right-front-end-architecture" />
-</head>
+</head> -->
 
 Choosing the right frontend framework can indeed be challenging, especially in a rapidly evolving landscape.
 

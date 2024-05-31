@@ -7,7 +7,7 @@ tags: [frontend, frameworks]
 ---
 
 <head>
-  <link rel="canonical" href="https://blog.smile.eu/en/digital/what-frontend-framework-fastest" />
+  <link rel="canonical" href="https://smile.eu/en/publications-and-events/what-frontend-framework-fastest" />
 </head>
 
 This article is the third installment in a series, which you can access through the following links:
