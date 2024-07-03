@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Tony Cabaye",
   tagline: "Frontend expert",
-  favicon: "img/favicon.ico", // TODO
+  favicon: "img/logo-32.png",
 
   // Set the production url of your site here
   url: "https://tonai.github.io",
@@ -59,7 +59,7 @@ const config = {
         // Will be passed to @docusaurus/plugin-sitemap
         // sitemap: {},
         theme: {
-          customCss: require.resolve("./src/css/custom.css"), // TODO
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -75,7 +75,7 @@ const config = {
         title: "Tony Cabaye",
         logo: {
           alt: "Tony Cabaye Logo",
-          src: "img/logo.svg", // TODO
+          src: "img/logo-32.png",
         },
         items: [
           { to: "posts", label: "Recent posts", position: "left" },
