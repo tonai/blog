@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">How to choose the right front-end architecture? | Tony Cabaye</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://tonai.github.io/blog/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://tonai.github.io/blog/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://tonai.github.io/blog/posts/front-end-architecture"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" name="keywords" content="Tony Cabaye, blog"><meta data-rh="true" property="og:title" content="How to choose the right front-end architecture? | Tony Cabaye"><meta data-rh="true" name="description" content="This article helps you make your choice for the right front-end architecture."><meta data-rh="true" property="og:description" content="This article helps you make your choice for the right front-end architecture."><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2023-06-26T00:00:00.000Z"><meta data-rh="true" property="article:tag" content="frontend,frameworks"><link data-rh="true" rel="icon" href="/blog/img/logo-32.png"><link data-rh="true" rel="canonical" href="https://tonai.github.io/blog/posts/front-end-architecture"><link data-rh="true" rel="alternate" href="https://tonai.github.io/blog/posts/front-end-architecture" hreflang="en"><link data-rh="true" rel="alternate" href="https://tonai.github.io/blog/posts/front-end-architecture" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://tonai.github.io/blog/posts/front-end-architecture","mainEntityOfPage":"https://tonai.github.io/blog/posts/front-end-architecture","url":"https://tonai.github.io/blog/posts/front-end-architecture","headline":"How to choose the right front-end architecture?","name":"How to choose the right front-end architecture?","description":"This article helps you make your choice for the right front-end architecture.","datePublished":"2023-06-26T00:00:00.000Z","author":{"@type":"Person","name":"Tony Cabaye","description":"Frontend expert","image":"https://avatars.githubusercontent.com/u/5246045"},"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://tonai.github.io/blog/posts","name":"Blog"}}</script><link rel="alternate" type="application/rss+xml" href="/blog/posts/rss.xml" title="Tony Cabaye RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/posts/atom.xml" title="Tony Cabaye Atom Feed"><link rel="stylesheet" href="/blog/assets/css/styles.e69a71d1.css">
+<script src="/blog/assets/js/runtime~main.0dbd5ae5.js" defer="defer"></script>
+<script src="/blog/assets/js/main.538c6947.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/blog/"><div class="navbar__logo"><img src="/blog/img/logo-32.png" alt="Tony Cabaye Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/blog/img/logo-32.png" alt="Tony Cabaye Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Tony Cabaye</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog/posts">Recent posts</a></div><div class="navbar__items navbar__items--right"><a href="https://www.linkedin.com/in/tony-cabaye/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://github.com/tonai" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Github<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Recent posts</div><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/posts/bundlers-comparison">2024 JavaScript bundlers comparison</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/posts/react-ui-libraries">The best React UI library</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/posts/fastest-framework">What front-end framework is the fastest ?</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/blog/posts/front-end-frameworks">What front-end framework should you choose ?</a></li><li class="sidebarItem__DBe"><a aria-current="page" class="sidebarItemLink_mo7H sidebarItemLinkActive_I1ZP" href="/blog/posts/front-end-architecture">How to choose the right front-end architecture?</a></li></ul></nav></aside><main class="col col--7"><article><header><h1 class="title_f1Hy">How to choose the right front-end architecture?</h1><div class="container_mt6G margin-vert--md"><time datetime="2023-06-26T00:00:00.000Z">June 26, 2023</time> · <!-- -->18 min read</div><div class="margin-top--md margin-bottom--sm row"><div class="col col--6 authorCol_Hf19"><div class="avatar margin-bottom--sm"><img class="avatar__photo" src="https://avatars.githubusercontent.com/u/5246045" alt="Tony Cabaye"><div class="avatar__intro"><div class="avatar__name"><span>Tony Cabaye</span></div><small class="avatar__subtitle">Frontend expert</small></div></div></div></div></header><div id="__blog-post-container" class="markdown"><p>Choosing the right frontend framework can indeed be challenging, especially in a rapidly evolving landscape.</p>
+<p>The purpose of this article is to assist you in selecting the appropriate architecture by providing an overview of the evolution of frontend frameworks.</p>
+<p>To fully grasp the current challenges that frontend frameworks address, it is crucial to explore the different frontend architectures that exist and gain an understanding of their respective advantages and drawbacks.</p>
+<p>By examining these architectures, you can develop a solid foundation for evaluating and selecting the most suitable framework for your project.</p>
+<ul>
+<li>First, let&#x27;s delve into various frontend architectures to gain a comprehensive understanding of the evolution of frontend frameworks.</li>
+<li>Next, we&#x27;ll shift our attention to the rendering techniques employed by Server Side Rendering (SSR) frameworks.</li>
+<li>Finally, we&#x27;ll explore different hydration techniques used to enhance interactivity in web applications.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="architectures">Architectures<a class="hash-link" aria-label="Direct link to Architectures" title="Direct link to Architectures" href="/blog/posts/front-end-architecture#architectures">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="multi-page-apps-mpa">Multi-Page Apps (MPA)<a class="hash-link" aria-label="Direct link to Multi-Page Apps (MPA)" title="Direct link to Multi-Page Apps (MPA)" href="/blog/posts/front-end-architecture#multi-page-apps-mpa">​</a></h3>
+<p>The Multi-Page App (MPA) was the initial architecture employed when browser capabilities were limited.</p>
+<p>In this architecture, the majority of dynamic processes occur on the backend.</p>
+<p>Here&#x27;s how navigation works within an MPA application:</p>
+<p><img decoding="async" loading="lazy" alt="MPA Load" src="/blog/assets/images/mpa-navigate-en.drawio-adc157f4af2d81c1de8f179a12c24c9f.png" width="602" height="282" class="img_ev3q"></p>
+<ol>
+<li>The client navigates through the website (e.g., clicking a link), and the browser provides visual feedback (e.g., displaying a spinner in the tab).</li>
+<li>Routing takes place on the backend.</li>
+<li>Data is fetched from the database.</li>
+<li>The backend generates the HTML, which is then sent back to the client.</li>
+<li>The browser renders the HTML.</li>
+</ol>
+<p>Here&#x27;s another example that involves a redirect after form submission (a well-known pattern used to prevent form resubmission when the page is refreshed):</p>
+<p><img decoding="async" loading="lazy" alt="MPA Navigate" src="/blog/assets/images/mpa-form-redirect-en.drawio-b19dc72246a3c944d1354e2e2b55eefc.png" width="602" height="522" class="img_ev3q"></p>
+<ol>
+<li>The client submits a form, resulting in UI feedback.</li>
+<li>Routing occurs, and the backend manages the data.</li>
+<li>The backend instructs the browser to redirect the user.</li>
+<li>The browser automatically redirects the user to the new page, providing UI feedback once again.</li>
+<li>The backend then generates the HTML for the new page.</li>
+<li>Finally, the browser renders the HTML.</li>
+</ol>
+<p>What are the advantages of such an architecture?</p>
+<ol>
+<li>It is straightforward to comprehend since all logic resides on the backend, eliminating additional complexity.</li>
+<li>UI feedback is handled by the browser.</li>
+</ol>
+<p>And what are the disadvantages?</p>
+<ol>
+<li>It involves full-page refreshes, requiring the reloading of frontend assets every time.</li>
+<li>Some tasks can be challenging to accomplish, such as managing focus or scroll position after form submission for example.</li>
+<li>Certain tasks are impractical, for instance, experiencing a full-page refresh every time an item is added to the favorites list.</li>
+<li>Some tasks are simply impossible, like animated page transitions.</li>
+<li>Managing state can be tricky, involving the utilization of cookies and other techniques.</li>
+<li>UI feedback is limited and not closely associated with the element the user interacted with.</li>
+</ol>
+<p>Due to these limitations, alternative architectures were introduced.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="progressively-enhanced-multi-page-apps-pempa">Progressively Enhanced Multi-Page Apps (PEMPA)<a class="hash-link" aria-label="Direct link to Progressively Enhanced Multi-Page Apps (PEMPA)" title="Direct link to Progressively Enhanced Multi-Page Apps (PEMPA)" href="/blog/posts/front-end-architecture#progressively-enhanced-multi-page-apps-pempa">​</a></h3>
+<p>Progressive Enhancement is the concept that our web applications should be functional and accessible to all web browsers, and then utilize additional browser capabilities to enhance the user experience (e.g., using JS and AJAX for improved UX).</p>
+<p>Here&#x27;s what happens when the user loads the website for the first time:</p>
+<p><img decoding="async" loading="lazy" alt="PEMP LoadA" src="/blog/assets/images/pempa-load-en.drawio-2cd5764721baaac260b30de31aac96ef.png" width="602" height="282" class="img_ev3q"></p>
+<ol>
+<li>The client loads the website, arriving from a Google search, for example.</li>
+<li>Similar to MPA, the backend generates the HTML and sends it back to the client.</li>
+<li>The browser renders the HTML, and JavaScript is loaded.</li>
+</ol>
+<p>Now, let&#x27;s consider the case where we use JavaScript to leverage browser history when the page is already loaded:</p>
+<p><img decoding="async" loading="lazy" alt="PEMPA Navigate" src="/blog/assets/images/pempa-navigate-en.drawio-3548d395e0e2f97a4fd51f63863f9334.png" width="602" height="362" class="img_ev3q"></p>
+<ol>
+<li>The client navigates within the website.</li>
+<li>JavaScript intercepts the default browser behavior, adds an item to the browser&#x27;s navigation history, and changes the browser&#x27;s URL (no browser feedback).</li>
+<li>Data is fetched from the backend using AJAX.</li>
+<li>On the backend side, the view component is no longer present, and data is usually sent back to the frontend in JSON format.</li>
+<li>The frontend receives the data and renders the new UI.</li>
+</ol>
+<p>So, what is the advantage?</p>
+<ol>
+<li>Significantly improved user experience (that&#x27;s the primary goal).</li>
+</ol>
+<p>And what about the disadvantages?</p>
+<ol>
+<li>More aspects to manage manually (e.g., form resubmission, error handling, spinners, etc.).</li>
+<li>Increased amount of code on both the frontend and backend, which can potentially lead to more bugs.</li>
+<li>Code duplication between the backend and frontend (the same UI needs to be available on both sides due to Progressive Enhancement).</li>
+<li>Reliance on imperative code (with or without jQuery) that can be difficult to follow.</li>
+<li>If a change is made on one side of the network (backend/frontend), the other side needs to be updated as well.</li>
+</ol>
+<p>While the UX is enhanced, it comes at a clear cost, which is why new architectures have been introduced.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="single-page-applications-spa">Single Page Applications (SPA)<a class="hash-link" aria-label="Direct link to Single Page Applications (SPA)" title="Direct link to Single Page Applications (SPA)" href="/blog/posts/front-end-architecture#single-page-applications-spa">​</a></h3>
+<p>To address the issue of code duplication while maintaining an enhanced user experience, the solution is to separate and remove the UI code from the backend. This is the core idea behind Single Page Applications (SPA).</p>
+<p>Here&#x27;s what happens when the user initially loads the website:</p>
+<p><img decoding="async" loading="lazy" alt="SPA Load" src="/blog/assets/images/spa-2-en.drawio-5927577c42862497ee1445fe5ab0d985.png" width="602" height="442" class="img_ev3q"></p>
+<ol>
+<li>The client loads the website.</li>
+<li>The backend sends the HTML to the client, however, at this point, the HTML is mostly empty (most of the time we only store a HTML file behind a web server).</li>
+<li>The browser renders the nearly empty HTML, and the JavaScript is loaded.</li>
+<li>Depending on the browser&#x27;s URL, the JavaScript will fetch data from the API server.</li>
+<li>The backend sends the data (most of the time using the JSON format).</li>
+<li>JavaScript renders the UI based on the URL.</li>
+</ol>
+<p>After the initial load, navigation follows a similar pattern as in the PEMPA scenario:</p>
+<p><img decoding="async" loading="lazy" alt="SPA Navigate" src="/blog/assets/images/pempa-navigate-en.drawio-3548d395e0e2f97a4fd51f63863f9334.png" width="602" height="362" class="img_ev3q"></p>
+<p>The advantages of SPA are:</p>
+<ol>
+<li>Continued improvement in user experience.</li>
+<li>Enhanced developer experience.</li>
+<li>Elimination of code duplication.</li>
+<li>Declarative code thanks to JSX or similar approaches.</li>
+<li>Utilization of modern tooling.</li>
+</ol>
+<p>However, there are some drawbacks:</p>
+<ol>
+<li>SEO issues.</li>
+<li>Larger bundle sizes.</li>
+<li>Longer initial load times and potential waterfall issues (waiting for components to load before fetching data).</li>
+<li>Reduced runtime performance on lower-powered devices.</li>
+<li>Complex state management.</li>
+</ol>
+<p>Now, the problem of SEO (and sometimes performance) needs to be addressed, which leads us to the next architecture.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="server-side-rendered-single-page-applications-ssrspa">Server-Side Rendered Single Page Applications (SSRSPA)<a class="hash-link" aria-label="Direct link to Server-Side Rendered Single Page Applications (SSRSPA)" title="Direct link to Server-Side Rendered Single Page Applications (SSRSPA)" href="/blog/posts/front-end-architecture#server-side-rendered-single-page-applications-ssrspa">​</a></h3>
+<p>To address the SEO problem, rendering the application on the server during the initial load is required.</p>
+<p>In this case, the application loads similarly to the PEMPA scenario from the point of vue of the client:</p>
+<p><img decoding="async" loading="lazy" alt="SSRSPA Load" src="/blog/assets/images/ssrspa-load-en.drawio-cfb201998e12fd74d3d159193af42729.png" width="842" height="362" class="img_ev3q"></p>
+<ol>
+<li>The client loads the website.</li>
+<li>Then the node server fetch the data from the API server.</li>
+<li>And use the data to build the view (as it would be done on the client side in the SPA architecture).</li>
+<li>The browser renders the HTML and loads the JavaScript.</li>
+<li>When the JavaScript is loaded, we use the term &quot;hydration&quot; to describe the process of making the page interactive.</li>
+</ol>
+<p>This &quot;hydration&quot; process is similar to the rendering that occurs on the backend, where the component tree is transformed into HTML.</p>
+<p>In this case, it&#x27;s done on the client and the generated virtual DOM is used to add event listeners to the existing DOM elements.</p>
+<p>The navigation can follow either the same pattern as the MPA scenario or the same pattern as the PEMPA/SPA scenario, depending on the rendering technique employed (explained in the next section).</p>
+<p>The advantages of this architecture are:</p>
+<ol>
+<li>Improved user experience.</li>
+<li>Enhanced developer experience, including elimination of duplication, declarative code, and improved tooling.</li>
+<li>No more SEO issues (although this may not be considered an advantage by some).</li>
+<li>Potentially improved performance, depending on the rendering technique used.</li>
+</ol>
+<p>However, there are some disadvantages:</p>
+<ol>
+<li>State management remains challenging.</li>
+<li>The ability to execute JavaScript on the server side is required.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="rendering-techniques">Rendering Techniques<a class="hash-link" aria-label="Direct link to Rendering Techniques" title="Direct link to Rendering Techniques" href="/blog/posts/front-end-architecture#rendering-techniques">​</a></h2>
+<p>The following techniques are all Server Side Rendering techniques (SSR) that involve processing components on the backend to generate HTML in the HTTP response and address SEO issues. They differ from Client Side Rendering (CSR) used by SPA architecture, which renders content on the client side only.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="dynamic-rendering-dr">Dynamic Rendering (DR)<a class="hash-link" aria-label="Direct link to Dynamic Rendering (DR)" title="Direct link to Dynamic Rendering (DR)" href="/blog/posts/front-end-architecture#dynamic-rendering-dr">​</a></h3>
+<p>In this technique, the page is dynamically generated on the server. It was primarily used to solve the SEO problems of SPA architecture by rendering frontend framework components on the server and sending the generated output to the client.</p>
+<p>However, in terms of performance, it is not necessarily superior to Client Side Rendering (CSR) used by SPA architecture (without utilizing server-side caching).</p>
+<p>The time taken to render the UI is similar, whether it occurs on the server for DR or on the frontend for CSR.</p>
+<p>In fact, it may even be worse due to the hydration phase (explained in the next section).</p>
+<p>Dynamic Rendering is available in frameworks such as Next.js (React), Gatsby (React), Nuxt (Vue), and others.</p>
+<p>As previously mentioned, compared to CSR (SPA), the advantages of Dynamic Rendering are:</p>
+<ol>
+<li>No SEO issues.</li>
+</ol>
+<p>However, there are some disadvantages:</p>
+<ol>
+<li>The page is generated on the backend, requiring Node.js and consuming more server resources than CSR.</li>
+<li>Caching is necessary to improve performance.</li>
+<li>Cache invalidation based on backend changes can be challenging.</li>
+<li>The page needs to be hydrated on the client side for interactivity.</li>
+<li>The content generated by the server and the client during hydration may differ (e.g., when using JavaScript for responsiveness).</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="static-site-generation-ssg">Static Site Generation (SSG)<a class="hash-link" aria-label="Direct link to Static Site Generation (SSG)" title="Direct link to Static Site Generation (SSG)" href="/blog/posts/front-end-architecture#static-site-generation-ssg">​</a></h3>
+<p>In the Static Site Generation (SSG) technique, pages are generated ahead of time during the build phase.</p>
+<p>The pages are then stored as static HTML files and served as static content.</p>
+<p>This technique is also supported in frameworks like Next.js (React), Gatsby (React), Nuxt (Vue), and others.</p>
+<p>SSG offers the following advantages:</p>
+<ol>
+<li>No SEO problems.</li>
+<li>Minimal server load.</li>
+<li>Fast page loading.</li>
+</ol>
+<p>However, there are some drawbacks:</p>
+<ol>
+<li>Pages are generated during the build phase and remain fully static until the next build.</li>
+<li>The build process can be time-consuming.</li>
+<li>All pages need to be generated during the build.</li>
+<li>The page still requires hydration on the client side to become interactive.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="incremental-static-regeneration-isr">Incremental Static Regeneration (ISR)<a class="hash-link" aria-label="Direct link to Incremental Static Regeneration (ISR)" title="Direct link to Incremental Static Regeneration (ISR)" href="/blog/posts/front-end-architecture#incremental-static-regeneration-isr">​</a></h3>
+<p>Incremental Static Regeneration (ISR) is a rendering technique that combines the benefits of SSR and SSG.</p>
+<p>Similar to SSG, pages are generated ahead of time during the build phase.</p>
+<p>However, there are two options for how to handle page updates:</p>
+<p>1. Time-based revalidation: You can specify a time interval during which the page will be cached.</p>
+<ul>
+<li>Initially, the static page is served for all requests.</li>
+<li>When the specified time expires, the framework generates a new version of the page in the background.</li>
+<li>Subsequent requests will then use the updated page.</li>
+</ul>
+<p>2. On-demand revalidation: Your back-office system can inform the framework whenever there are changes, triggering the regeneration of specific pages. This allows for dynamic updates without relying solely on a predetermined time interval.</p>
+<p>Next.js (React) supports both time-based and on-demand revalidation, while Nuxt (Vue) currently only supports time-based revalidation.</p>
+<p>The advantages of ISR include:</p>
+<ol>
+<li>SEO compatibility.</li>
+<li>Reduced server load compared to SSR.</li>
+<li>Fast page loading.</li>
+<li>Ability to have dynamic content.</li>
+</ol>
+<p>However, there are some considerations:</p>
+<ol>
+<li>Time-based revalidation may result in potential cache issues, as older content may be served until the cache expires.</li>
+<li>Implementing revalidation logic between the front-office and back-office is necessary for on-demand revalidation.</li>
+<li>Page hydration is still required for interactivity.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="jamstack">Jamstack<a class="hash-link" aria-label="Direct link to Jamstack" title="Direct link to Jamstack" href="/blog/posts/front-end-architecture#jamstack">​</a></h3>
+<p>From <a href="https://jamstack.org/" target="_blank" rel="noopener noreferrer">Jamstack.org</a> :</p>
+<p>Jamstack is an architectural approach that decouples the web experience layer from data and business logic, improving flexibility, scalability, performance, and maintainability.</p>
+<p>The core principles of Jamstack include:</p>
+<ul>
+<li>Decouple Building and Hosting</li>
+<li>Decouple Frontend and Backend</li>
+<li>Use APIs rather than databases (expose data through APIs, use external tools...etc.)</li>
+<li>Generate pre-baked markup, enhanced with JS</li>
+</ul>
+<p>In practice, a Jamstack setup involves the following steps:</p>
+<ol>
+<li>Generating pre-rendered static markup using a Static Site Generator.</li>
+<li>Hosting the static assets on a CDN (Content Delivery Network).</li>
+<li>Enhancing the static markup with JavaScript using a frontend framework.</li>
+<li>Integrating with backend APIs for dynamic content.</li>
+<li>Storing the entire project in a version control system like Git.</li>
+<li>Utilizing automated builds to streamline the deployment process.</li>
+</ol>
+<p>The advantages of using Jamstack include:</p>
+<ol>
+<li>SEO compatibility, allowing for better search engine visibility.</li>
+<li>Reduced server load due to serving static assets from a CDN.</li>
+<li>Fast page loading times for improved user experience.</li>
+<li>The ability to incorporate dynamic content through backend APIs.</li>
+</ol>
+<p>However, there are some considerations:</p>
+<ol>
+<li>Content management and updates should be handled through version control systems like Git.</li>
+<li>For content that live in database, custom logic is required to generate data inside Git (and also maybe to trigger a new build).</li>
+<li>Page hydration is still necessary for interactivity on the client side.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" href="/blog/posts/front-end-architecture#summary">​</a></h3>
+<p>We can summarize the different rendering technique in the following table:</p>
+<table><thead><tr><th></th><th><code>CSR</code></th><th><code>SSR</code></th><th><code>SSG</code></th><th><code>ISR</code></th><th>JamStack</th></tr></thead><tbody><tr><td>SEO friendly</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>Server load</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>Loading time</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td><td>✅</td></tr><tr><td>Dynamic content</td><td>✅</td><td>✅</td><td>❌</td><td>🔶</td><td>🔶</td></tr><tr><td>Serverless</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td></tr></tbody></table>
+<p>Legend:</p>
+<ul>
+<li>✅ : OK</li>
+<li>❌ : KO</li>
+<li>🔶 : Moderately OK</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hydration-techniques">Hydration techniques<a class="hash-link" aria-label="Direct link to Hydration techniques" title="Direct link to Hydration techniques" href="/blog/posts/front-end-architecture#hydration-techniques">​</a></h2>
+<p>When utilizing SSR (Server-Side Rendering), the server sends the HTML to the browser, which then renders it. However, until the JavaScript is loaded, the user will not be able to interact with the page.</p>
+<p>The purpose of hydration is to enable interactivity on the page by attaching event listeners to the server-generated DOM structure.</p>
+<p>The different techniques serve the purpose of enhancing performance, aiming to make the page interactive for the user as quickly as possible upon receiving the response from the server.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="static-routes">Static Routes<a class="hash-link" aria-label="Direct link to Static Routes" title="Direct link to Static Routes" href="/blog/posts/front-end-architecture#static-routes">​</a></h3>
+<p>In fact, if there are no interactions on certain pages, there is no need to perform hydration on them.</p>
+<p>In such cases, there is also no need to send any JavaScript to the client.</p>
+<p>This may seem obvious, but not all frameworks have the capability to avoid sending any JavaScript altogether.</p>
+<p>In such cases, we end up with the MPA (Multi-Page Application) architecture, as without any JavaScript, there won&#x27;t be any client-side routing.</p>
+<p>This technique is available in the following frameworks: Remix, Sveltekit and SolidStart.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="classical-hydration">Classical hydration<a class="hash-link" aria-label="Direct link to Classical hydration" title="Direct link to Classical hydration" href="/blog/posts/front-end-architecture#classical-hydration">​</a></h3>
+<p>When using classical hydration, the component tree structure is generated on the server to create the HTML.</p>
+<p>However, on the client side, the tree structure is generated again so that the library can compare the existing HTML and bind events to the appropriate elements.</p>
+<p><a href="https://www.patterns.dev/posts/progressive-hydration" target="_blank" rel="noopener noreferrer">The first video of this link</a> shows what happen in the browser during classical hydration.</p>
+<p>This is essentially what occurs when using Next.js with the old Pages Router.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="progressive-hydration-or-lazy-hydration">Progressive hydration (or Lazy Hydration)<a class="hash-link" aria-label="Direct link to Progressive hydration (or Lazy Hydration)" title="Direct link to Progressive hydration (or Lazy Hydration)" href="/blog/posts/front-end-architecture#progressive-hydration-or-lazy-hydration">​</a></h3>
+<p>The purpose of progressive hydration is to utilize dynamic components to defer the loading of non-urgent components and prioritize the hydration of urgent components.</p>
+<p>This technique requires manual implementation by the developer, who decides which components should be lazy loaded and how they should load.</p>
+<p><a href="https://www.patterns.dev/posts/progressive-hydration" target="_blank" rel="noopener noreferrer">The second and third videos of this link</a> demonstrate the differences between classical hydration and progressive hydration.</p>
+<p>The technical requirements for progressive hydration implementation are as follows:</p>
+<ol>
+<li>Allows usage of SSR for all components.</li>
+<li>Supports splitting of code into individual components or chunks.</li>
+<li>Supports client side hydration of these chunks in a developer defined sequence.</li>
+<li>Does not block user input on chunks that are already hydrated.</li>
+<li>Allows usage of some sort of loading indicator for chunks with deferred hydration.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="selective-hydration">Selective Hydration<a class="hash-link" aria-label="Direct link to Selective Hydration" title="Direct link to Selective Hydration" href="/blog/posts/front-end-architecture#selective-hydration">​</a></h3>
+<p>The idea behind selective hydration is to return an incomplete response from the server.</p>
+<p>By streaming the response, we can receive some response from the backend even if some queries have not finished yet.</p>
+<p>Using this technique, we can start loading JavaScript even when the page is incomplete in order to begin hydration on the possible elements.</p>
+<p>When we receive the query response, we can send it back to the browser, which will replace the incomplete UI and then hydrate the new page chunk, <a href="https://www.patterns.dev/posts/react-selective-hydration" target="_blank" rel="noopener noreferrer">as shown in the videos in this page</a> .</p>
+<p>This feature was introduced in React 18 with <a href="https://github.com/reactwg/react-18/discussions/37" target="_blank" rel="noopener noreferrer">renderToPipeableStream</a> and implemented in <a href="https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#example" target="_blank" rel="noopener noreferrer">Next.js</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="partial-hydration-islands-architecture">Partial Hydration (Islands Architecture)<a class="hash-link" aria-label="Direct link to Partial Hydration (Islands Architecture)" title="Direct link to Partial Hydration (Islands Architecture)" href="/blog/posts/front-end-architecture#partial-hydration-islands-architecture">​</a></h3>
+<p>Partial hydration is kind of an updated version of Static Routes.<br>
+<!-- -->The purpose of islands is to hydrate at the component level, rather than the entire page.<br>
+<!-- -->This technique can be used when only certain components need to be interactive.<br>
+<!-- -->Anything outside these islands/components will never change and will not be interactive.<br>
+<!-- -->This technique is used by Astro, Marko, Fresh, and 11ty.<br>
+<!-- -->And it is also available in Next.js or Gatsby using React Server Components.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="resumable-application">Resumable application<a class="hash-link" aria-label="Direct link to Resumable application" title="Direct link to Resumable application" href="/blog/posts/front-end-architecture#resumable-application">​</a></h3>
+<p>This concept is used by Qwik.<br>
+<!-- -->The idea behind a resumable application is to serialize the state of the application on the server and then resume from that point on the client.<br>
+<!-- -->Even event handlers get serialized, like in this example:</p>
+<div class="language-html codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-html codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token tag punctuation" style="color:#393A34">&lt;</span><span class="token tag" style="color:#00009f">button</span><span class="token tag" style="color:#00009f"> </span><span class="token tag attr-name namespace" style="color:#00a4db;opacity:0.7">on:</span><span class="token tag attr-name" style="color:#00a4db">click</span><span class="token tag attr-value punctuation attr-equals" style="color:#393A34">=</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag attr-value" style="color:#e3116c">q-671f8656.js#s_D04jAYuCnhM[0 1]</span><span class="token tag attr-value punctuation" style="color:#393A34">&quot;</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><span class="token plain">click me</span><span class="token tag punctuation" style="color:#393A34">&lt;/</span><span class="token tag" style="color:#00009f">button</span><span class="token tag punctuation" style="color:#393A34">&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Qwik also extensively utilizes lazy loading to load JavaScript only when needed, such as when clicking on the button in the above example.</p>
+<p>This allows for an app that sends minimal inlined JavaScript on the initial load but remains highly interactive.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="summary-1">Summary<a class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" href="/blog/posts/front-end-architecture#summary-1">​</a></h3>
+<p>All of these techniques yield different performance results and may have limitations. However, it is not necessary to compare them extensively.<br>
+<!-- -->Major frameworks consider these techniques and continuously evolve to offer new performance improvements.<br>
+<!-- -->In most cases, if your application is slow, it is likely not due to the hydration technique being used.<br>
+<!-- -->Therefore, hydration will probably not be an issue if you follow the framework documentation, but it&#x27;s still valuable to be aware of these techniques.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" href="/blog/posts/front-end-architecture#conclusion">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="do-we-need-a-frontend-framework-">Do we need a frontend framework ?<a class="hash-link" aria-label="Direct link to Do we need a frontend framework ?" title="Direct link to Do we need a frontend framework ?" href="/blog/posts/front-end-architecture#do-we-need-a-frontend-framework-">​</a></h3>
+<p>The decision to use a frontend framework depends on the specific requirements of the project.</p>
+<p>Here are the pros in favor of using a frontend framework:</p>
+<ul>
+<li>Maintainability and scalability</li>
+<li>Fast and delightful user experience</li>
+<li>Standardized front-end approach</li>
+<li>Quick prototyping and development</li>
+</ul>
+<p>On the other hand, there are some cons to consider:</p>
+<ul>
+<li>Complexity for simple projects</li>
+<li>Difficulty integrating with backend tools</li>
+<li>Opinionated nature of frameworks</li>
+<li>Requires training and familiarity</li>
+</ul>
+<p>In summary, it is recommended to use a frontend framework when you have a complex frontend with a significant number of user interactions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="headless-or-not-">Headless or not ?<a class="hash-link" aria-label="Direct link to Headless or not ?" title="Direct link to Headless or not ?" href="/blog/posts/front-end-architecture#headless-or-not-">​</a></h3>
+<p>Headless architecture is not always the solution.</p>
+<p>If you only need some interactions on certain pages, you can use frontend frameworks for those specific components without using them for the entire page.</p>
+<p>Here are some considerations for different frameworks:</p>
+<ul>
+<li>React can be used to render specific components, but it is not SEO-friendly (only for parts rendered with React).</li>
+<li>Vue.js can be used in Progressive Enhancement mode, as it is based on the HTML served by the server and is SEO-friendly.</li>
+<li>Angular is not well-suited for this scenario.</li>
+<li>Some frameworks, like Alpine.js, are designed specifically for this use case.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="seo-or-not-">SEO or not ?<a class="hash-link" aria-label="Direct link to SEO or not ?" title="Direct link to SEO or not ?" href="/blog/posts/front-end-architecture#seo-or-not-">​</a></h3>
+<p>If SEO is not a requirement, client-side rendering (CSR) frameworks are usually sufficient.</p>
+<p>Examples of scenarios where SEO is not critical include:</p>
+<ul>
+<li>Backend offices or admin panels</li>
+<li>Apps that require authentication</li>
+<li>Apps without indexable content (e.g.: <a href="https://excalidraw.com/" target="_blank" rel="noopener noreferrer">Excalidraw</a> )</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="choosing-the-rendering-technique">Choosing the Rendering Technique<a class="hash-link" aria-label="Direct link to Choosing the Rendering Technique" title="Direct link to Choosing the Rendering Technique" href="/blog/posts/front-end-architecture#choosing-the-rendering-technique">​</a></h3>
+<ol>
+<li>If the content is in the source code → JamStack can be used.</li>
+<li>If you are building a website with infrequent changes → Static Site Generation (SSG) can be used.</li>
+<li>If you can implement a content update logic → Incremental Static Regeneration (ISR) with on-demand revalidation can be used.</li>
+<li>If you want to utilize time-based caching → ISR with time-based revalidation can be used.</li>
+<li>Otherwise, server-side rendering (SSR) is recommended.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="wrap-up">Wrap up<a class="hash-link" aria-label="Direct link to Wrap up" title="Direct link to Wrap up" href="/blog/posts/front-end-architecture#wrap-up">​</a></h3>
+<p>To summarize, the decision on using a frontend framework, headless architecture, SEO considerations, and rendering technique should be based on the specific requirements of the project.<br>
+<!-- -->The schema below provides a visual representation that can assist in choosing the appropriate architecture with the corresponding rendering technique:</p>
+<p><img decoding="async" loading="lazy" alt="app" src="/blog/assets/images/summary-en.drawio-9e7135aab18513c093aa5c51ea591856.png" width="1021" height="601" class="img_ev3q"></p>
+<p>Please note that this schema serves as a helpful guideline, but there may be certain edge cases where it may not fully apply. It&#x27;s important to consider the unique characteristics and needs of your project when making these decisions.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="resources">Resources<a class="hash-link" aria-label="Direct link to Resources" title="Direct link to Resources" href="/blog/posts/front-end-architecture#resources">​</a></h3>
+<p><a href="https://www.epicweb.dev/the-webs-next-transition" target="_blank" rel="noopener noreferrer">https://www.epicweb.dev/the-webs-next-transition</a><br>
+<a href="https://buchet.tech/blog/csr-ssr-ssg-isr-wtf" target="_blank" rel="noopener noreferrer">https://buchet.tech/blog/csr-ssr-ssg-isr-wtf</a><br>
+<a href="https://www.sitepen.com/blog/intro-to-html-first-frontend-frameworks" target="_blank" rel="noopener noreferrer">https://www.sitepen.com/blog/intro-to-html-first-frontend-frameworks</a><br>
+<a href="https://www.patterns.dev/" target="_blank" rel="noopener noreferrer">https://www.patterns.dev/</a><br>
+<a href="https://dev.to/this-is-learning/why-efficient-hydration-in-javascript-frameworks-is-so-challenging-1ca3" target="_blank" rel="noopener noreferrer">https://dev.to/this-is-learning/why-efficient-hydration-in-javascript-frameworks-is-so-challenging-1ca3</a></p></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/blog/posts/tags/frontend">frontend</a></li><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/blog/posts/tags/frameworks">frameworks</a></li></ul></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--prev" href="/blog/posts/front-end-frameworks"><div class="pagination-nav__sublabel">Newer Post</div><div class="pagination-nav__label">What front-end framework should you choose ?</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#architectures">Architectures</a><ul><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#multi-page-apps-mpa">Multi-Page Apps (MPA)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#progressively-enhanced-multi-page-apps-pempa">Progressively Enhanced Multi-Page Apps (PEMPA)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#single-page-applications-spa">Single Page Applications (SPA)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#server-side-rendered-single-page-applications-ssrspa">Server-Side Rendered Single Page Applications (SSRSPA)</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#rendering-techniques">Rendering Techniques</a><ul><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#dynamic-rendering-dr">Dynamic Rendering (DR)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#static-site-generation-ssg">Static Site Generation (SSG)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#incremental-static-regeneration-isr">Incremental Static Regeneration (ISR)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#jamstack">Jamstack</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#summary">Summary</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#hydration-techniques">Hydration techniques</a><ul><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#static-routes">Static Routes</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#classical-hydration">Classical hydration</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#progressive-hydration-or-lazy-hydration">Progressive hydration (or Lazy Hydration)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#selective-hydration">Selective Hydration</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#partial-hydration-islands-architecture">Partial Hydration (Islands Architecture)</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#resumable-application">Resumable application</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#summary-1">Summary</a></li></ul></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#conclusion">Conclusion</a><ul><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#do-we-need-a-frontend-framework-">Do we need a frontend framework ?</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#headless-or-not-">Headless or not ?</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#seo-or-not-">SEO or not ?</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#choosing-the-rendering-technique">Choosing the Rendering Technique</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#wrap-up">Wrap up</a></li><li><a class="table-of-contents__link toc-highlight" href="/blog/posts/front-end-architecture#resources">Resources</a></li></ul></li></ul></div></div></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Blog</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog/posts">Recent posts</a></li></ul></div><div class="col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/tony-cabaye/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn</a></li><li class="footer__item"><a href="https://github.com/tonai" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/CabayeTony" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 Tony Cabaye, Inc.</div></div></div></footer></div>
+</body>
+</html>
