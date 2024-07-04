@@ -1,11 +1,7 @@
+import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
-const { themes } = require("prism-react-renderer");
-const lightTheme = themes.github;
-const darkTheme = themes.dracula;
-
-/** @type {import('@docusaurus/types').Config} */
 const config: Config = {
   title: "Tony Cabaye",
   tagline: "Frontend expert",
@@ -36,7 +32,6 @@ const config: Config = {
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
       {
         // Will be passed to @docusaurus/plugin-content-blog
         blog: {
@@ -60,9 +55,9 @@ const config: Config = {
         // Will be passed to @docusaurus/plugin-sitemap
         // sitemap: {},
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
         },
-      },
+      } satisfies Preset.Options,
     ],
   ],
 
@@ -141,8 +136,8 @@ const config: Config = {
     },
     prism: {
       additionalLanguages: ["bash", "diff", "json"],
-      theme: lightTheme,
-      darkTheme: darkTheme,
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
 };

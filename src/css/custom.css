@@ -1,6 +1,6 @@
 /* Reference: https://mantine.dev/colors-generator/?color=2bd7dd */
 
-[data-theme="light"] {
+:root {
   --ifm-color-primary: #2bd7dd;
   --ifm-color-primary-dark: #13bec4;
   --ifm-color-primary-darker: #00aaaf;
