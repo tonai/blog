@@ -137,7 +137,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Tony Cabaye, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Tony Cabaye, Inc.`,
     },
     prism: {
       additionalLanguages: ["bash", "diff", "json"],

@@ -1,11 +1,6 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* Reference: https://mantine.dev/colors-generator/?color=2bd7dd */
 
-/* You can override the default Infima variables here. */
-:root {
+[data-theme="light"] {
   --ifm-color-primary: #2bd7dd;
   --ifm-color-primary-dark: #13bec4;
   --ifm-color-primary-darker: #00aaaf;
@@ -17,7 +12,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   --ifm-color-primary: #2bd7dd;
   --ifm-color-primary-dark: #13bec4;

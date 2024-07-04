@@ -1,32 +1,29 @@
-import React from "react";
-import clsx from "clsx";
-// import Link from '@docusaurus/Link';
+import { useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 
+import Logo from "../components/Logo";
+
 import styles from "./index.module.css";
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-      </div>
-    </header>
-  );
-}
-
 export default function Home(): JSX.Element {
+  const [isLogo, setIsLogo] = useState(false);
   const { siteConfig } = useDocusaurusContext();
+
+  function toggleBanner() {
+    setIsLogo((x) => !x);
+  }
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
-      <main></main>
+      <main>
+        <button className={styles.button} onClick={toggleBanner} type="button">
+          <Logo Component="h1" isLogo={isLogo} tagline={siteConfig.tagline} />
+        </button>
+      </main>
     </Layout>
   );
 }
