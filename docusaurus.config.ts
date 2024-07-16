@@ -73,6 +73,7 @@ const config: Config = {
       },
       items: [
         { to: "posts", label: "Recent posts", position: "left" },
+        { to: "projects", label: "My projects", position: "left" },
         {
           href: "https://www.linkedin.com/in/tony-cabaye/",
           label: "LinkedIn",
@@ -94,6 +95,10 @@ const config: Config = {
             {
               label: "Recent posts",
               to: "posts",
+            },
+            {
+              label: "My projects",
+              to: "project",
             },
           ],
         },

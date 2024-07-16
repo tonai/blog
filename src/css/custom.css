@@ -22,3 +22,8 @@
   --ifm-color-primary-lightest: #7ae6ea;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.container {
+  padding-top: var(--ifm-spacing-horizontal);
+  padding-bottom: var(--ifm-spacing-horizontal);
+}

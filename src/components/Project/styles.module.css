@@ -1,0 +1,45 @@
+.project {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.imageContainer {
+  aspect-ratio: 1;
+  width: 200px;
+  margin-right: 2em;
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}
+
+.image {
+  display: block;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+}
+
+.date {
+  margin: 0;
+}
+
+.links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 1em;
+}
