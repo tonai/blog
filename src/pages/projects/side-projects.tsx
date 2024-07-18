@@ -1,20 +1,17 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 
 import Project from "@site/src/components/Project";
 
-import chineseEvents from "./images/chinese-events.png";
-import blog from "./images/blog.png";
-import MusicMaker from "./images/music-maker.png";
-import neuralNetwork from "./images/neural-network.png";
+import chineseEvents from "./images/chinese-events.webp";
+import blog from "./images/blog.webp";
+import MusicMaker from "./images/music-maker.webp";
+import neuralNetwork from "./images/neural-network.webp";
 
-export default function Projects(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-
+export default function SideProjects(): JSX.Element {
   return (
     <Layout
-      title={`My projects`}
-      description="Projects of Tony Cabaye, JavaScript Full Stack senior developer, Frontend expert and Game developer from France"
+      title={`Side Projects`}
+      description="Side Projects of Tony Cabaye, JavaScript Full Stack senior developer, Frontend expert and Game developer from France"
     >
       <div className="container margin-vert--lg">
         <h1>Side Projects</h1>

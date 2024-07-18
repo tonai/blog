@@ -1,33 +1,31 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Project from "@site/src/components/Project";
 
-import faceliftSaloon from "./images/facelift-saloon.png";
-import jumperRace from "./images/jumper-race.png";
-import lasertank from "./images/lasertank.png";
-import lasertank3 from "./images/lasertank3.png";
-import lasertankJava from "./images/lasertank-java.png";
-import lasertankUnity from "./images/lasertank-unity.png";
-import minersAndTraitors from "./images/miners-and-traitors.png";
-import nhexReact from "./images/nhex-react.png";
-import ninthKind from "./images/ninth-kind.png";
-import react2048 from "./images/react-2048.png";
-import reactConnect4 from "./images/react-connect4.png";
-import reactFarlanders from "./images/react-farlanders.png";
-import reactLasertank from "./images/react-lasertank.png";
-import reactMinesweeper from "./images/react-minesweeper.png";
-import reactNonogram from "./images/react-nonogram.png";
-import reactPong from "./images/react-pong.png";
-import reactTicTacToe from "./images/react-tictactoe.png";
-import zombieGame from "./images/zombie-game.png";
+import coloryage from "./images/coloryage/coloryage7.webp";
+import faceliftSaloon from "./images/facelift-saloon.webp";
+import jumperRace from "./images/jumper-race.webp";
+import lasertank from "./images/lasertank.webp";
+import lasertank3 from "./images/lasertank3.webp";
+import lasertankJava from "./images/lasertank-java.webp";
+import lasertankUnity from "./images/lasertank-unity.webp";
+import minersAndTraitors from "./images/miners-and-traitors.webp";
+import nhexReact from "./images/nhex-react.webp";
+import ninthKind from "./images/ninth-kind.webp";
+import react2048 from "./images/react-2048.webp";
+import reactConnect4 from "./images/react-connect4.webp";
+import reactFarlanders from "./images/react-farlanders.webp";
+import reactLasertank from "./images/react-lasertank.webp";
+import reactMinesweeper from "./images/react-minesweeper.webp";
+import reactNonogram from "./images/react-nonogram.webp";
+import reactPong from "./images/react-pong.webp";
+import reactTicTacToe from "./images/react-tictactoe.webp";
+import zombieGame from "./images/zombie-game.webp";
 
 export default function Games(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-
   return (
     <Layout
-      title={`My projects`}
-      description="Projects of Tony Cabaye, JavaScript Full Stack senior developer, Frontend expert and Game developer from France"
+      title={`Games`}
+      description="Games projects of Tony Cabaye, JavaScript Full Stack senior developer, Frontend expert and Game developer from France"
     >
       <div className="container margin-vert--lg">
         <h1>Games</h1>
@@ -159,8 +157,8 @@ export default function Games(): JSX.Element {
         >
           Unfinished porting of the Neuroshima Hex game with React.
           <br />
-          Neuroshima Hex is a turn-based strategy game in which several armies
-          face each other.
+          Neuroshima Hex is a turn-based strategy board game in which several
+          armies face each other.
         </Project>
         <Project
           date="September 2018"
@@ -284,7 +282,7 @@ export default function Games(): JSX.Element {
           The goal here was to use composition over inheritance.
         </Project>
         <Project
-          date="2013 ?"
+          date="?"
           image={lasertank3}
           links={[
             { link: "https://tonai.github.io/lasertank3/html/game.html" },
@@ -307,12 +305,21 @@ export default function Games(): JSX.Element {
           links={[
             { link: "https://github.com/tonai/ninth-kind", type: "github" },
           ]}
-          techs={["Python"]}
+          techs={["Python", "Photoshop"]}
           title="Ninth Kind"
         >
           Game developed during the{" "}
           <a href="http://www.pyweek.org/12/">Pyweek Game Jam #12</a>.<br />I
           was mainly in charge of the graphics.
+        </Project>
+        <Project
+          date="?"
+          image={coloryage}
+          techs={["Javascript", "Jquery", "PHP"]}
+          title="Colory Age"
+        >
+          Unfinished RPG game with color theme.
+          <br />I was in charge of the frontend development.
         </Project>
         <Project
           date="December 2008"
@@ -323,7 +330,7 @@ export default function Games(): JSX.Element {
               type: "github",
             },
           ]}
-          techs={["Java"]}
+          techs={["Java", "Photoshop"]}
           title="Lasertank Java"
         >
           Second version of my Lasertank game made using Java.

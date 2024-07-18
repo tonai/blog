@@ -89,6 +89,7 @@ const config: Config = {
             { label: "Open Source Projects", to: "projects/os-projects" },
             { label: "Games", to: "projects/games" },
             { label: "Side Projects", to: "projects/side-projects" },
+            { label: "Oldies", to: "projects/oldies" },
           ],
         },
         {

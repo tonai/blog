@@ -19,7 +19,7 @@ interface IProjectProps {
   children: ReactNode;
   date: string;
   image: string;
-  links: ILink[];
+  links?: ILink[];
   techs?: (keyof typeof technologies)[];
   title: string;
 }
@@ -87,7 +87,7 @@ export default function Project(props: IProjectProps) {
           <span>Created:</span> {date}
         </p>
         <ul className={styles.links}>
-          {links.map(({ link, type }, i) => (
+          {links?.map(({ link, type }, i) => (
             <li key={i} className={styles.link}>
               {type === "github" ? (
                 <GitHubIcon className={styles.icon} />

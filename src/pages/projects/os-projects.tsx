@@ -1,22 +1,19 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 
 import Project from "@site/src/components/Project";
 
-import gally from "./images/gally.png";
-import haring from "./images/haring.png";
-import reactPerForm from "./images/react-per-form.png";
-import slidev from "./images/slidev.png";
-import slidevThemeSmile from "./images/slidev-theme-smile.png";
-import storybookAddonTheme from "./images/storybook-addon-theme.png";
+import gally from "./images/gally.webp";
+import haring from "./images/haring.webp";
+import reactPerForm from "./images/react-per-form.webp";
+import slidev from "./images/slidev.webp";
+import slidevThemeSmile from "./images/slidev-theme-smile.webp";
+import storybookAddonTheme from "./images/storybook-addon-theme.webp";
 
-export default function Projects(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
-
+export default function OsProjects(): JSX.Element {
   return (
     <Layout
-      title={`My projects`}
-      description="Projects of Tony Cabaye, JavaScript Full Stack senior developer, Frontend expert and Game developer from France"
+      title={`Open Source Projects`}
+      description="Open Source Projects of Tony Cabaye, JavaScript Full Stack senior developer, Frontend expert and Game developer from France"
     >
       <div className="container margin-vert--lg">
         <h1>Open Source Projects</h1>

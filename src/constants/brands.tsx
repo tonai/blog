@@ -70,6 +70,12 @@ export const technologies = {
       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
     />
   ),
+  Jquery: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg"
+    />
+  ),
   Karma: (
     <img
       className="brandIcon"
@@ -103,6 +109,18 @@ export const technologies = {
     <img
       className="brandIcon"
       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/p5js/p5js-original.svg"
+    />
+  ),
+  PHP: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+    />
+  ),
+  Photoshop: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
     />
   ),
   Playwright: (
