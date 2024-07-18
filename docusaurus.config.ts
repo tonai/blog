@@ -55,16 +55,24 @@ const config: Config = {
         // Will be passed to @docusaurus/plugin-sitemap
         // sitemap: {},
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: [
+            "./node_modules/@mantine/core/styles.css",
+            "./src/css/custom.css",
+          ],
         },
       } satisfies Preset.Options,
     ],
   ],
 
+  // stylesheets: ['https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'],
+
   themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg", // TODO
-    metadata: [{ name: "keywords", content: "Tony Cabaye, blog" }],
+    metadata: [{ name: "keywords", content: "Tony Cabaye, blog, projects" }],
     navbar: {
       title: "Tony Cabaye",
       logo: {
@@ -73,7 +81,16 @@ const config: Config = {
       },
       items: [
         { to: "posts", label: "Recent posts", position: "left" },
-        { to: "projects", label: "My projects", position: "left" },
+        {
+          type: "dropdown",
+          label: "My projects",
+          position: "left",
+          items: [
+            { label: "Open Source Projects", to: "projects/os-projects" },
+            { label: "Games", to: "projects/games" },
+            { label: "Side Projects", to: "projects/side-projects" },
+          ],
+        },
         {
           href: "https://www.linkedin.com/in/tony-cabaye/",
           label: "LinkedIn",

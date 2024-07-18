@@ -23,7 +23,31 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.container {
-  padding-top: var(--ifm-spacing-horizontal);
-  padding-bottom: var(--ifm-spacing-horizontal);
+body {
+  background-color: transparent;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+.brand {
+  width: 1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.brandIcon {
+  display: block;
+  height: 1em;
+  width: 1em;
+}
+
+[data-theme="dark"] .devicon-nextjs-plain.colored {
+  color: white;
 }

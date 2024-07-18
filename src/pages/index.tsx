@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import clsx from "clsx";
@@ -14,6 +14,11 @@ export default function Home(): JSX.Element {
   function toggleBanner() {
     setIsLogo((x) => !x);
   }
+
+  useEffect(() => {
+    document.body.classList.add("homepage");
+    return () => document.body.classList.remove("homepage");
+  }, []);
 
   return (
     <Layout

@@ -3,10 +3,10 @@ import { SVGProps } from "react";
 export default function WebIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
-      height="16"
       viewBox="0 0 22.407 22.094744"
       width="16"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "1em" }}
       {...props}
     >
       <path
