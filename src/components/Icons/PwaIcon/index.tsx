@@ -3,6 +3,7 @@ import { SVGProps } from "react";
 export default function PwaIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      className="pwa-icon"
       xmlns="http://www.w3.org/2000/svg"
       height="16"
       baseProfile="full"

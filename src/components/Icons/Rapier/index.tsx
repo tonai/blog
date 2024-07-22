@@ -3,6 +3,7 @@ import { SVGProps } from "react";
 export default function Rapier(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      className="rapier-icon"
       width="16"
       viewBox="0 0 156 97"
       version="1.1"

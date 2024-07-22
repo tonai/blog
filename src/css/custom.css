@@ -48,6 +48,8 @@ h2 {
   width: 1em;
 }
 
-[data-theme="dark"] .devicon-nextjs-plain.colored {
-  color: white;
+[data-theme="dark"] .symfony-icon path,
+[data-theme="dark"] .express-icon path,
+[data-theme="dark"] .socketio-icon path {
+  fill: white;
 }

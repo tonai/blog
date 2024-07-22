@@ -87,6 +87,7 @@ const config: Config = {
           position: "left",
           items: [
             { label: "Open Source Projects", to: "projects/os-projects" },
+            { label: "Office Projects", to: "projects/office-projects" },
             { label: "Games", to: "projects/games" },
             { label: "Side Projects", to: "projects/side-projects" },
             { label: "Oldies", to: "projects/oldies" },

@@ -282,7 +282,7 @@ export default function Games(): JSX.Element {
           The goal here was to use composition over inheritance.
         </Project>
         <Project
-          date="?"
+          date="July 2013"
           image={lasertank3}
           links={[
             { link: "https://tonai.github.io/lasertank3/html/game.html" },
@@ -300,6 +300,15 @@ export default function Games(): JSX.Element {
           <br />I updated the game in 2018 to deploy the backend on AWS.
         </Project>
         <Project
+          date="June 2013"
+          image={coloryage}
+          techs={["Javascript", "Jquery", "PHP"]}
+          title="Colory Age"
+        >
+          Unfinished RPG game with color theme.
+          <br />I was in charge of the frontend development.
+        </Project>
+        <Project
           date="April 2011"
           image={ninthKind}
           links={[
@@ -311,15 +320,6 @@ export default function Games(): JSX.Element {
           Game developed during the{" "}
           <a href="http://www.pyweek.org/12/">Pyweek Game Jam #12</a>.<br />I
           was mainly in charge of the graphics.
-        </Project>
-        <Project
-          date="?"
-          image={coloryage}
-          techs={["Javascript", "Jquery", "PHP"]}
-          title="Colory Age"
-        >
-          Unfinished RPG game with color theme.
-          <br />I was in charge of the frontend development.
         </Project>
         <Project
           date="December 2008"

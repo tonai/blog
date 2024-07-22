@@ -1,19 +1,30 @@
 .project {
-  display: flex;
+  display: grid;
+  grid-template-columns: fit-content(200px) 1fr;
+  grid-template-rows: fit-content(20px) 1fr;
+  grid-template-areas:
+    "b a"
+    "b c";
   margin-bottom: 2em;
+}
+
+.header {
+  grid-area: a;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }
 
 .imageContainer {
+  grid-area: b;
   min-width: 200px;
   width: 200px;
-  height: 200px;
   margin-right: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-self: center;
 }
 
 .imageButton {
@@ -51,19 +62,25 @@
   z-index: 201;
 }
 
+.svg {
+  width: 200px;
+  height: 200px;
+}
+
+.zoom .svg {
+  height: auto;
+  width: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
 .transition {
   view-transition-name: zoom;
 }
 
 .content {
+  grid-area: c;
   flex: 1;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1em;
 }
 
 .techs {
@@ -101,12 +118,12 @@
 
 @media (max-width: 996px) {
   .project {
-    flex-direction: column;
-    align-items: stretch;
+    display: block;
   }
 
   .imageContainer {
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1em;
     width: auto;
     height: auto;

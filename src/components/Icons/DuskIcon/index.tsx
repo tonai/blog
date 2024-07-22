@@ -3,6 +3,7 @@ import { SVGProps } from "react";
 export default function DuskIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
+      className="dusk-icon"
       width="16"
       viewBox="0 0 512 512"
       fill="none"

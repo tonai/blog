@@ -81,6 +81,7 @@ export default function OsProjects(): JSX.Element {
             "Redux",
             "Material UI",
             "Storybook",
+            "GraphQL",
             "Jest",
           ]}
           title="Gally"

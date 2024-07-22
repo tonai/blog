@@ -12,11 +12,11 @@ export default function DocusaurusIcon(props: SVGProps<SVGSVGElement>) {
       <defs>
         <path
           d="M4.883.09v1.08a1 1 0 01-1 1H1a1 1 0 01-1-1V.09h4.883z"
-          id="a"
+          id="docusaurusa"
         />
         <path
           d="M4.883.09v1.08a1 1 0 01-1 1H1a1 1 0 01-1-1V.09h4.883z"
-          id="b"
+          id="docusaurusb"
         />
       </defs>
       <g fill="none" fill-rule="evenodd">
@@ -144,8 +144,11 @@ export default function DocusaurusIcon(props: SVGProps<SVGSVGElement>) {
             <rect x="60.848" y="1.126" width="4.883" height="4.883" rx="1" />
             <rect x="66.635" y="1.126" width="4.883" height="4.883" rx="1" />
             <rect x="77.485" y="1.126" width="4.883" height="4.883" rx="1" />
-            <use xlinkHref="#a" transform="rotate(-180 38.471 1.648)" />
-            <use xlinkHref="#b" transform="translate(72.06 3.839)" />
+            <use
+              xlinkHref="#docusaurusa"
+              transform="rotate(-180 38.471 1.648)"
+            />
+            <use xlinkHref="#docusaurusb" transform="translate(72.06 3.839)" />
           </g>
           <rect
             fill="#4A4A4A"
