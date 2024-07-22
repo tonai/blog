@@ -80,7 +80,8 @@ const config: Config = {
         src: "img/logo-32.png",
       },
       items: [
-        { to: "posts", label: "Recent posts", position: "left" },
+        { to: "posts", label: "Recent Posts", position: "left" },
+        { to: "slides", label: "Presentation Slides", position: "left" },
         {
           type: "dropdown",
           label: "My projects",
@@ -109,11 +110,15 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Blog",
+          title: "Tony Cabaye",
           items: [
             {
-              label: "Recent posts",
+              label: "Blog Recent Posts",
               to: "posts",
+            },
+            {
+              label: "Presentation slides",
+              to: "slides",
             },
           ],
         },
