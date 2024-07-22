@@ -77,7 +77,7 @@ const config: Config = {
       title: "Tony Cabaye",
       logo: {
         alt: "Tony Cabaye Logo",
-        src: "img/logo-32.png",
+        src: "img/logo-32.webp",
       },
       items: [
         { to: "posts", label: "Recent Posts", position: "left" },
