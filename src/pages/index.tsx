@@ -16,8 +16,10 @@ export default function Home(): JSX.Element {
   }
 
   useEffect(() => {
-    document.body.classList.add("homepage");
-    return () => document.body.classList.remove("homepage");
+    if (typeof document !== "undefined") {
+      document.body.classList.add("homepage");
+      return () => document.body.classList.remove("homepage");
+    }
   }, []);
 
   return (

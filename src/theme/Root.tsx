@@ -2,7 +2,6 @@ import {
   MantineColorScheme,
   MantineColorSchemeManager,
   MantineProvider,
-  Overlay,
   createTheme,
 } from "@mantine/core";
 import React, { useEffect, useMemo, useState } from "react";
@@ -15,13 +14,17 @@ let handleStorageEvent;
 const key = "theme";
 const colorSchemeManager: MantineColorSchemeManager = {
   get: (defaultValue) => {
-    return (document.documentElement.dataset.theme ??
+    return ((typeof document !== "undefined" &&
+      document.documentElement.dataset.theme) ??
       defaultValue) as MantineColorScheme;
   },
 
   set: () => {},
 
   subscribe: (onUpdate) => {
+    if (typeof window === "undefined") {
+      return;
+    }
     handleStorageEvent = (event) => {
       if (event.storageArea === window.localStorage && event.key === key) {
         onUpdate(event.newValue);
@@ -32,6 +35,9 @@ const colorSchemeManager: MantineColorSchemeManager = {
   },
 
   unsubscribe: () => {
+    if (typeof window === "undefined") {
+      return;
+    }
     window.removeEventListener("storage", handleStorageEvent);
   },
 
@@ -43,10 +49,12 @@ export default function Root({ children }) {
   const zoomContext = useMemo(() => ({ zoom, setZoom }), [setZoom, zoom]);
 
   useEffect(() => {
-    if (zoom) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+    if (typeof document !== "undefined") {
+      if (zoom) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
     }
   }, [zoom]);
 
