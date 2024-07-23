@@ -6,9 +6,9 @@ authors: tonai
 tags: [frontend, frameworks]
 ---
 
-<!-- <head>
-  <link rel="canonical" href="https://blog.smile.eu/en/digital/what-frontend-framework-should-you-choose" />
-</head> -->
+<head>
+  <link rel="canonical" href="https://smile.eu/en/publications-and-events/what-frontend-framework-should-you-choose" />
+</head>
 
 This article serves as a follow-up to my previous article on front-end architecture, which can be found [here](/blog/posts/front-end-architecture). While it's not necessary to have read the previous article before reading this one, if you're looking to make the best choice for selecting your frontend framework, it would be beneficial to take a look.
 
