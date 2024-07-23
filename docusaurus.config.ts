@@ -70,8 +70,7 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg", // TODO
+    image: "img/docusaurus-social-card.webp",
     metadata: [{ name: "keywords", content: "Tony Cabaye, blog, projects" }],
     navbar: {
       title: "Tony Cabaye",

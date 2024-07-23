@@ -18,13 +18,13 @@ import fdf from "./images/fdf.webp";
 import gobelins from "./images/gobelins.webp";
 import hec from "./images/hec.webp";
 import hutchinson from "./images/hutchinson.webp";
+import industrie40 from "./images/industrie-40.webp";
 import kering from "./images/kering.webp";
 import lhg from "./images/lhg.webp";
 import passionata from "./images/passionata.webp";
 import pcv from "./images/pcv.webp";
 import rac from "./images/rac.webp";
 import rgaa from "./images/rgaa.webp";
-import reactPerForm from "./images/react-per-form.webp";
 import renault from "./images/renault.webp";
 import safran from "./images/safran.webp";
 import sepro from "./images/sepro.webp";
@@ -80,7 +80,7 @@ export default function OsProjects(): JSX.Element {
         </Project>
         <Project
           date="October 2021"
-          image={reactPerForm}
+          image={industrie40}
           techs={["Unity"]}
           title="Industry 4.0"
         >

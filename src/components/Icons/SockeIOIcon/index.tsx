@@ -11,7 +11,7 @@ export default function SocketIOIcon(props: SVGProps<SVGSVGElement>) {
       style={{ width: "1em" }}
       {...props}
     >
-      <g fill="#010101" fill-rule="evenodd">
+      <g fill="#010101" fillRule="evenodd">
         <path
           style={{
             lineHeight: "normal",
