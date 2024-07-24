@@ -3,7 +3,7 @@ slug: front-end-frameworks
 title: What front-end framework should you choose ?
 description: After digging for the right front-end architecture, this article helps you make your choice for the right front-end framework.
 authors: tonai
-tags: [frontend, frameworks]
+tags: [Frontend, Frameworks]
 ---
 
 <head>

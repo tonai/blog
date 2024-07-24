@@ -3,7 +3,7 @@ slug: front-end-architecture
 title: How to choose the right front-end architecture?
 description: This article helps you make your choice for the right front-end architecture.
 authors: tonai
-tags: [frontend, frameworks]
+tags: [Frontend, Frameworks]
 ---
 
 <!-- <head>

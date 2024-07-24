@@ -3,7 +3,7 @@ slug: bundlers-comparison
 title: 2024 JavaScript bundlers comparison
 description: This article compares different JavaScript bundlers in the context of building a library and the context of building an app.
 authors: tonai
-tags: [frontend, bundler]
+tags: [Frontend, Bundler]
 ---
 
 The JavaScript ecosystem is really vast and rich but because of that it is really not easy to choose the right tool when you have to.

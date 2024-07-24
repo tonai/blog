@@ -3,7 +3,7 @@ slug: react-ui-libraries
 title: The best React UI library
 description: This article compares different React component libraries to help choose the best for your project.
 authors: tonai
-tags: [frontend, react, library]
+tags: [Frontend, React, Library]
 ---
 
 <head>

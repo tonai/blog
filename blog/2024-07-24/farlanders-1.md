@@ -3,7 +3,7 @@ slug: farlanders-1
 title: Creating a game with React - part 1
 description: This first article explains how I re-builded a game using React.
 authors: tonai
-tags: [frontend, game development, Farlanders]
+tags: [Frontend, Game development, Farlanders]
 ---
 
 This is the first article in a series on how I rebuilt a game (the [Farlanders](https://store.steampowered.com/app/1318740/Farlanders/) game) using web technologies and React.

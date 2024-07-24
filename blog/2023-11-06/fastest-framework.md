@@ -3,7 +3,7 @@ slug: fastest-framework
 title: What front-end framework is the fastest ?
 description: This article compares different front-end frameworks regarding their performances.
 authors: tonai
-tags: [frontend, frameworks]
+tags: [Frontend, Frameworks]
 ---
 
 <head>

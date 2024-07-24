@@ -3,7 +3,7 @@ slug: slide-libraries
 title: Choosing a slide library
 description: This article compares different libraries you can use to create slides from code.
 authors: tonai
-tags: [frontend, vuejs, library]
+tags: [Frontend, VueJS, Library]
 ---
 
 # Choosing a slide library
@@ -317,7 +317,7 @@ After digging the code I found that to get syntax highlighting you have to use a
 
 It means for example, that a `Markdown` block like this:
 
-````md
+```md
 //`graphql
 query {
   hero {
@@ -326,7 +326,7 @@ query {
   }
 }
 //`
-````
+```
 
 Needs to be replaced with this markup:
 
