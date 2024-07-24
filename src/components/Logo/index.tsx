@@ -7,7 +7,7 @@ interface ILogoProps {
   Component?: ElementType;
   color?: string;
   isLogo: boolean;
-  size?: number;
+  size?: number | string;
   tagline?: string;
 }
 
@@ -28,8 +28,8 @@ export default function Logo(props: ILogoProps) {
       style={
         {
           "--color": color,
-          "--fontSize": `${(size / 18) * 3}rem`,
-          "--size": `${size}rem`,
+          "--size": typeof size === "number" ? `${size}rem` : size,
+          "--fontSize": "calc(var(--size) / 18 * 3)", //${(size / 18) * 3}rem
         } as CSSProperties
       }
     >

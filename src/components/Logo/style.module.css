@@ -16,7 +16,9 @@
   border-radius: 0;
   container-type: size;
   background-color: #2bd7dd;
-  transition: all 1000ms ease;
+  transition:
+    border-radius 1000ms ease,
+    box-shadow 1000ms ease;
 }
 
 .title {

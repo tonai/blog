@@ -29,7 +29,12 @@ export default function Home(): JSX.Element {
     >
       <main className={styles.main}>
         <button className={styles.button} onClick={toggleBanner} type="button">
-          <Logo Component="h1" isLogo={isLogo} tagline={siteConfig.tagline} />
+          <Logo
+            Component="h1"
+            isLogo={isLogo}
+            size="clamp(18rem, 20vw, 28rem)"
+            tagline={siteConfig.tagline}
+          />
         </button>
         <div className={clsx("container", styles.container)}>
           <p>Hello and welcome 👋</p>
