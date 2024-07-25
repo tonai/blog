@@ -43,7 +43,7 @@ export default function Games(): JSX.Element {
         >
           Multiplayer game developed with Dusk (previously Rune) during the{" "}
           <a href="https://spring-2024.reactjam.com/">Spring 2024 React Jam</a>{" "}
-          (finished 3rd).
+          (ranked 3rd).
           <br />
           Control a little blob and be the fastest to reach the end of each
           level.
@@ -64,7 +64,7 @@ export default function Games(): JSX.Element {
         >
           Multiplayer game developed with Dusk (previously Rune) during the{" "}
           <a href="https://winter-2023.reactjam.com/">Winter 2023 React Jam</a>{" "}
-          (finished 3rd).
+          (ranked 3rd).
           <br />
           Turn based strategy game where you have to create a path to the gold,
           but one of you is a traitor.
@@ -84,15 +84,14 @@ export default function Games(): JSX.Element {
           techs={["Typescript", "React", "Vite"]}
           title="React Farlanders"
         >
-          React porting of the{" "}
+          A React port of the{" "}
           <a href="https://store.steampowered.com/app/1318740/Farlanders/">
             Farlanders
           </a>{" "}
-          game which is a turn-based strategy game about creating a colony on
-          mars.
+          game, a turn-based strategy game about creating a colony on mars.
           <br />
-          The game is not finished (yet), but the goal was to demonstrate that
-          it is possible to develop a real game with React.
+          The goal is purely educational, demonstrating that it is possible to
+          develop a real game with React.
         </Project>
         <Project
           date="September 2022"
@@ -109,8 +108,8 @@ export default function Games(): JSX.Element {
         >
           Nonogram game made with React.
           <br />
-          Playable (just upload a small transparent png image) but needs
-          polishing.
+          It's playable (you need to upload a small transparent PNG image to
+          test it) but still needs some polishing.
         </Project>
         <Project
           date="October 2021"
@@ -125,9 +124,6 @@ export default function Games(): JSX.Element {
           title="Lasertank Unity"
         >
           Porting of my lasertank game on unity.
-          <br />
-          Game is functional, but it needs to have real 3d assets and more
-          polishing.
         </Project>
         <Project
           date="June 2021"
@@ -279,7 +275,8 @@ export default function Games(): JSX.Element {
         >
           Fourth porting of my Lasertank game.
           <br />
-          The goal here was to use composition over inheritance.
+          The goal here was to use composition over inheritance in pure
+          Javascript.
         </Project>
         <Project
           date="July 2013"
@@ -292,7 +289,7 @@ export default function Games(): JSX.Element {
           techs={["Javascript", "AWS", "Grunt"]}
           title="Lasertank 3"
         >
-          Third and most polished version of my Lasertank game which includes a
+          Third and most advanced version of my Lasertank game which includes a
           level editor.
           <br />
           Pure Javascript implementation using an homemade multiple inheritance
@@ -305,7 +302,7 @@ export default function Games(): JSX.Element {
           techs={["Javascript", "Jquery", "PHP"]}
           title="Colory Age"
         >
-          Unfinished RPG game with color theme.
+          RPG game with color theme.
           <br />I was in charge of the frontend development.
         </Project>
         <Project
