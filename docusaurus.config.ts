@@ -79,6 +79,7 @@ const config: Config = {
         src: "img/logo-32.webp",
       },
       items: [
+        { to: "resume", label: "Resume", position: "left" },
         { to: "posts", label: "Recent Posts", position: "left" },
         { to: "slides", label: "Presentation Slides", position: "left" },
         {
@@ -112,7 +113,11 @@ const config: Config = {
           title: "Tony Cabaye",
           items: [
             {
-              label: "Blog Recent Posts",
+              label: "Resume",
+              to: "resume",
+            },
+            {
+              label: "Recent Posts",
               to: "posts",
             },
             {

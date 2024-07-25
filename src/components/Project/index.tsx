@@ -1,12 +1,12 @@
 import { ComponentType, ReactNode, SVGProps } from "react";
-import { Tooltip } from "@mantine/core";
 
 import { technologies } from "@site/src/constants/brands";
 import GitHubIcon from "../Icons/GithubIcon";
 import WebIcon from "../Icons/WebIcon";
+import Techs from "../Techs";
 
 import styles from "./styles.module.css";
-import ProjectImageClient from "./ProjectImageClient";
+import ImageZoom from "../ImageZoom";
 
 export interface ILink {
   link: string;
@@ -29,17 +29,9 @@ export default function Project(props: IProjectProps) {
     <article className={styles.project}>
       <header className={styles.header}>
         <h2 className={styles.title}>{title}</h2>
-        {techs && (
-          <div className={styles.techs}>
-            {techs.map((tech) => (
-              <Tooltip key={tech} label={tech}>
-                {technologies[tech]}
-              </Tooltip>
-            ))}
-          </div>
-        )}
+        <Techs techs={techs} />
       </header>
-      <ProjectImageClient Image={image} title={title} />
+      <ImageZoom className={styles.image} Image={image} title={title} />
       <div className={styles.content}>
         <p className={styles.date}>
           <span>Started:</span> {date}

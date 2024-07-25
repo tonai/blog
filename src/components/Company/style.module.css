@@ -1,0 +1,74 @@
+.root {
+  margin-bottom: 1em;
+  page-break-after: always;
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: var(--ifm-heading-color);
+}
+
+.logo {
+  width: 100px;
+  margin-right: 1em;
+}
+
+.title {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+}
+
+.duration {
+  font-size: 0.9em;
+}
+
+.svg {
+  margin-left: 1em;
+}
+
+.svg path {
+  transition: d 400ms ease;
+}
+
+.opened path {
+  d: path("M8,0 L16,8 L0,8 Z");
+}
+
+.collapse {
+  padding: 1em 0 0 calc(100px + 1em);
+  position: relative;
+}
+
+.collapse:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 49px;
+  width: 2px;
+  background-color: var(--mantine-color-dimmed);
+}
+
+@media print {
+  .button {
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .svg {
+    display: none;
+  }
+
+  .collapse {
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+  }
+}

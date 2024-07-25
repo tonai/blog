@@ -12,6 +12,7 @@ import PouchDBIcon from "../components/Icons/PouchDBIcon";
 import SailsIcon from "../components/Icons/Sails";
 import ExpressIcon from "../components/Icons/ExpressIcon";
 import SocketIOIcon from "../components/Icons/SockeIOIcon";
+import GitHubIcon from "../components/Icons/GithubIcon";
 
 export const technologies = {
   Angular: (
@@ -37,6 +38,12 @@ export const technologies = {
       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
     />
   ),
+  "C#": (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+    />
+  ),
   Capacitor: (
     <img
       className="brandIcon"
@@ -48,10 +55,22 @@ export const technologies = {
       <CordovaIcon />
     </div>
   ),
+  CSS: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+    />
+  ),
   D3: (
     <img
       className="brandIcon"
       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/d3js/d3js-original.svg"
+    />
+  ),
+  Docker: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
     />
   ),
   Docusaurus: (
@@ -74,6 +93,23 @@ export const technologies = {
     <div className="brand">
       <ExpressIcon />
     </div>
+  ),
+  Git: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+    />
+  ),
+  Github: (
+    <div className="brand">
+      <GitHubIcon />
+    </div>
+  ),
+  Gitlab: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+    />
   ),
   Grunt: (
     <img
@@ -152,6 +188,18 @@ export const technologies = {
       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg"
     />
   ),
+  MongoDB: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+    />
+  ),
+  MySQL: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+    />
+  ),
   NestJS: (
     <img
       className="brandIcon"
@@ -162,6 +210,18 @@ export const technologies = {
     <img
       className="brandIcon"
       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+    />
+  ),
+  NodeJS: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+    />
+  ),
+  Nuxt: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg"
     />
   ),
   P5: (
@@ -186,6 +246,12 @@ export const technologies = {
     <img
       className="brandIcon"
       src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg"
+    />
+  ),
+  PostgreSQL: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
     />
   ),
   PouchDB: (
@@ -231,6 +297,12 @@ export const technologies = {
     <div className="brand">
       <SailsIcon />
     </div>
+  ),
+  Sass: (
+    <img
+      className="brandIcon"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+    />
   ),
   "Socket.IO": (
     <div className="brand">

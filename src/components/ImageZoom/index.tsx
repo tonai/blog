@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import clsx, { ClassValue } from "clsx";
 import {
   ComponentType,
   MutableRefObject,
@@ -8,17 +8,19 @@ import {
 } from "react";
 import { Overlay } from "@mantine/core";
 
-import styles from "./styles.module.css";
 import { useZoom } from "@site/src/contexts/zoom";
 import { startViewTransition } from "@site/src/helpers/transition";
 
+import styles from "./styles.module.css";
+
 interface IProjectProps {
+  className?: ClassValue;
   Image: string | ComponentType<SVGProps<SVGSVGElement> & { title?: string }>;
   title: string;
 }
 
-export default function ProjectImageClient(props: IProjectProps) {
-  const { Image, title } = props;
+export default function ImageZoom(props: IProjectProps) {
+  const { className, Image, title } = props;
   const { setZoom, zoom } = useZoom();
   const containerRef = useRef<HTMLDivElement>();
   const imageRef = useRef<HTMLImageElement | HTMLDivElement>();
@@ -51,7 +53,7 @@ export default function ProjectImageClient(props: IProjectProps) {
   return (
     <div
       ref={containerRef}
-      className={clsx(styles.imageContainer, {
+      className={clsx(styles.imageContainer, className, {
         [styles.zoom]: zoom === title,
       })}
     >
@@ -62,7 +64,7 @@ export default function ProjectImageClient(props: IProjectProps) {
         {typeof Image === "string" ? (
           <img
             ref={imageRef as MutableRefObject<HTMLImageElement>}
-            alt={`${title} project`}
+            alt={title}
             className={styles.image}
             src={Image}
           />

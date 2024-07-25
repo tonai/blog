@@ -9,6 +9,10 @@
   --ifm-color-primary-lighter: #55dee3;
   --ifm-color-primary-lightest: #7ae6ea;
   --ifm-code-font-size: 95%;
+  --ifm-h1-font-size: 3rem;
+  --ifm-h2-font-size: 2.5rem;
+  --ifm-h3-font-size: 2rem;
+  --ifm-h4-font-size: 1.5rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -27,12 +31,8 @@ body {
   background-color: transparent;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 1.6em;
+button {
+  cursor: pointer;
 }
 
 .center {
@@ -62,8 +62,23 @@ h2 {
   width: 1em;
 }
 
-[data-theme="dark"] .symfony-icon path,
-[data-theme="dark"] .express-icon path,
-[data-theme="dark"] .socketio-icon path {
-  fill: white;
+.icon {
+  height: 1em;
+  width: 1em;
+}
+
+@media not print {
+  .brand .symfony-icon path,
+  .brand .express-icon path,
+  .brand .socketio-icon path,
+  .brand .github-icon path {
+    fill: black;
+  }
+
+  [data-theme="dark"] .brand .symfony-icon path,
+  [data-theme="dark"] .brand .express-icon path,
+  [data-theme="dark"] .brand .socketio-icon path,
+  [data-theme="dark"] .brand .github-icon path {
+    fill: white;
+  }
 }

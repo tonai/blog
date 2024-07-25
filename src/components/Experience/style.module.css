@@ -1,0 +1,7 @@
+.title {
+  margin-bottom: 0;
+}
+
+.list {
+  margin-top: var(--ifm-list-margin);
+}

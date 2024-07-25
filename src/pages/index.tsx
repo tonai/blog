@@ -39,8 +39,8 @@ export default function Home(): JSX.Element {
         <div className={clsx("container", styles.container)}>
           <p>Hello and welcome 👋</p>
           <p>
-            I am Tony Cabaye (tonai on Github a JavaScript Full Stack senior
-            developer, Frontend expert and Game developer from France 🇫🇷.
+            I am Tony Cabaye a JavaScript Full Stack senior developer, Frontend
+            expert and Game developer from France 🇫🇷.
           </p>
           <p>
             I like to create stuff that run in the browser and I like to share

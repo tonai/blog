@@ -1,6 +1,7 @@
 import {
   MantineColorScheme,
   MantineColorSchemeManager,
+  MantineColorsTuple,
   MantineProvider,
   createTheme,
 } from "@mantine/core";
@@ -8,7 +9,25 @@ import React, { useEffect, useMemo, useState } from "react";
 
 import { ZoomProvider } from "../contexts/zoom";
 
-const theme = createTheme({});
+const myColor: MantineColorsTuple = [
+  "#e1ffff",
+  "#d0f8f9",
+  "#a7eff1",
+  "#7ae6ea",
+  "#55dee3",
+  "#3ed9df",
+  "#2bd7dd",
+  "#13bec4",
+  "#00aaaf",
+  "#009398",
+];
+
+const theme = createTheme({
+  colors: {
+    myColor,
+  },
+  primaryColor: "myColor",
+});
 
 let handleStorageEvent;
 const key = "theme";
