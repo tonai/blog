@@ -16,16 +16,18 @@ export default function Games(): JSX.Element {
         <Project
           date="December 2023"
           image={lib}
+          language="en"
           links={[{ link: "https://tonai.github.io/slides/frontend-library" }]}
-          title="Creating a frontend library (English)"
+          title="Creating a frontend library"
         >
           Presentation slides about what creating a frontend library.
         </Project>
         <Project
           date="November 2023"
           image={tntHeadless}
+          language="fr"
           links={[{ link: "https://tonai.github.io/slides/tnt-headless" }]}
-          title="Tech' Non Tech' - What is headless ? (French)"
+          title="Tech' Non Tech' - What is headless ?"
         >
           Presentation slides about what is headless for non technical peoples.
           <br />
@@ -34,10 +36,11 @@ export default function Games(): JSX.Element {
         <Project
           date="October 2023"
           image={archi}
+          language="fr"
           links={[
             { link: "https://tonai.github.io/slides/frontend-architecture" },
           ]}
-          title="Frontend architectures (French)"
+          title="Frontend architectures"
         >
           Presentation slides about frontend architecture.
           <br />

@@ -7,6 +7,8 @@ import Techs from "../Techs";
 
 import styles from "./styles.module.css";
 import ImageZoom from "../ImageZoom";
+import FranceIcon from "../Icons/FranceIcon";
+import UKIcon from "../Icons/UKIcon";
 
 export interface ILink {
   link: string;
@@ -17,18 +19,27 @@ interface IProjectProps {
   children: ReactNode;
   date: string;
   image: string | ComponentType<SVGProps<SVGSVGElement> & { title?: string }>;
+  language?: "fr" | "en";
   links?: ILink[];
   techs?: (keyof typeof technologies)[];
   title: string;
 }
 
 export default function Project(props: IProjectProps) {
-  const { children, date, image, links, techs, title } = props;
+  const { children, date, image, language, links, techs, title } = props;
 
   return (
     <article className={styles.project}>
       <header className={styles.header}>
-        <h2 className={styles.title}>{title}</h2>
+        <h2 className={styles.title}>
+          {title}{" "}
+          {language &&
+            (language === "fr" ? (
+              <FranceIcon className={styles.middle} />
+            ) : (
+              <UKIcon className={styles.middle} />
+            ))}
+        </h2>
         <Techs techs={techs} />
       </header>
       <ImageZoom className={styles.image} Image={image} title={title} />

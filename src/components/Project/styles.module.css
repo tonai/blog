@@ -30,6 +30,10 @@
   margin: 0;
 }
 
+.middle {
+  vertical-align: middle;
+}
+
 .date {
   margin: 0;
 }
