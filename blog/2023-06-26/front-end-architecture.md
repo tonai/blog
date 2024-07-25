@@ -34,7 +34,7 @@ In this architecture, the majority of dynamic processes occur on the backend.
 
 Here's how navigation works within an MPA application:
 
-![MPA Load](./mpa-navigate-en.drawio.png)
+![MPA Load](./mpa-navigate-en.drawio.webp)
 
 1.  The client navigates through the website (e.g., clicking a link), and the browser provides visual feedback (e.g., displaying a spinner in the tab).
 2.  Routing takes place on the backend.
@@ -44,7 +44,7 @@ Here's how navigation works within an MPA application:
 
 Here's another example that involves a redirect after form submission (a well-known pattern used to prevent form resubmission when the page is refreshed):
 
-![MPA Navigate](./mpa-form-redirect-en.drawio.png)
+![MPA Navigate](./mpa-form-redirect-en.drawio.webp)
 
 1.  The client submits a form, resulting in UI feedback.
 2.  Routing occurs, and the backend manages the data.
@@ -75,7 +75,7 @@ Progressive Enhancement is the concept that our web applications should be funct
 
 Here's what happens when the user loads the website for the first time:
 
-![PEMP LoadA](./pempa-load-en.drawio.png)
+![PEMP LoadA](./pempa-load-en.drawio.webp)
 
 1.  The client loads the website, arriving from a Google search, for example.
 2.  Similar to MPA, the backend generates the HTML and sends it back to the client.
@@ -83,7 +83,7 @@ Here's what happens when the user loads the website for the first time:
 
 Now, let's consider the case where we use JavaScript to leverage browser history when the page is already loaded:
 
-![PEMPA Navigate](./pempa-navigate-en.drawio.png)
+![PEMPA Navigate](./pempa-navigate-en.drawio.webp)
 
 1.  The client navigates within the website.
 2.  JavaScript intercepts the default browser behavior, adds an item to the browser's navigation history, and changes the browser's URL (no browser feedback).
@@ -111,7 +111,7 @@ To address the issue of code duplication while maintaining an enhanced user expe
 
 Here's what happens when the user initially loads the website:
 
-![SPA Load](./spa-2-en.drawio.png)
+![SPA Load](./spa-2-en.drawio.webp)
 
 1.  The client loads the website.
 2.  The backend sends the HTML to the client, however, at this point, the HTML is mostly empty (most of the time we only store a HTML file behind a web server).
@@ -122,7 +122,7 @@ Here's what happens when the user initially loads the website:
 
 After the initial load, navigation follows a similar pattern as in the PEMPA scenario:
 
-![SPA Navigate](./pempa-navigate-en.drawio.png)
+![SPA Navigate](./pempa-navigate-en.drawio.webp)
 
 The advantages of SPA are:
 
@@ -148,7 +148,7 @@ To address the SEO problem, rendering the application on the server during the i
 
 In this case, the application loads similarly to the PEMPA scenario from the point of vue of the client:
 
-![SSRSPA Load](./ssrspa-load-en.drawio.png)
+![SSRSPA Load](./ssrspa-load-en.drawio.webp)
 
 1. The client loads the website.
 2. Then the node server fetch the data from the API server.
@@ -455,7 +455,7 @@ Examples of scenarios where SEO is not critical include:
 To summarize, the decision on using a frontend framework, headless architecture, SEO considerations, and rendering technique should be based on the specific requirements of the project.  
 The schema below provides a visual representation that can assist in choosing the appropriate architecture with the corresponding rendering technique:
 
-![app](./summary-en.drawio.png)
+![app](./summary-en.drawio.webp)
 
 Please note that this schema serves as a helpful guideline, but there may be certain edge cases where it may not fully apply. It's important to consider the unique characteristics and needs of your project when making these decisions.
 

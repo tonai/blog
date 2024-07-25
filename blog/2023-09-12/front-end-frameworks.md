@@ -54,7 +54,7 @@ Here are some statistics retrieved from GitHub that primarily indicate the popul
 
 By utilizing [Star history](https://star-history.com/), we can generate an image illustrating the GitHub star history for various frameworks over time. This image provides us with valuable insights into the trends and levels of popularity (indicated by the shape of the curve, particularly rapid increases) for these frameworks:
 
-![Star history graph for frontend frameworks](./star-history-frontend.png)
+![Star history graph for frontend frameworks](./star-history-frontend.webp)
 
 It's important to note that the star count for Vue.js version 2 appears to be decreasing due to a repository change for version 3\. As a result, the older version (v2) is not experiencing significant growth in popularity, while the newer version (v3) is steadily increasing but has not yet reached the same level as the v2 version. It is not advisable to simply combine the star counts for v2 and v3, as there is likely some overlap or intersection between the two.
 
@@ -64,7 +64,7 @@ It's important to note that the star count for Vue.js version 2 appears to be de
 
 By utilizing [Google trends](https://trends.google.com/), we can generate an image that illustrates the search trends on Google. This image provides valuable insights into the relative popularity and interest over time for various frameworks based on search queries:
 
-![Google trends graph for frontend frameworks](./trends-frontend-en.png)
+![Google trends graph for frontend frameworks](./trends-frontend-en.webp)
 
 [Click here](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F012l1vxv,%2Fg%2F11c0vmgx5d,%2Fg%2F11c6w0ddw9,%2Fg%2F11c5t00h04,%2Fm%2F0268gyp&hl=en) to view an updated graph based on the date you're reading this article.
 
@@ -72,7 +72,7 @@ By utilizing [Google trends](https://trends.google.com/), we can generate an ima
 
 By referring to [npm trends](https://npmtrends.com/), we can obtain the number of downloads for various frameworks, providing insights into their usage. The download statistics indicate the level of adoption and utilization for each framework:
 
-![npm trends graph for frontend frameworks](./npm-frontend.png)
+![npm trends graph for frontend frameworks](./npm-frontend.webp)
 
 [Click here](https://npmtrends.com/@angular/core-vs-@stencil/core-vs-backbone-vs-jquery-vs-lit-vs-preact-vs-react-vs-solid-js-vs-svelte-vs-vue) to view an updated graph based on the date you're reading this article.
 
@@ -243,7 +243,7 @@ Here are some statistics retrieved from [GitHub](https://github.com/) that prima
 
 By utilizing [Star history](https://star-history.com/) we can generate an image illustrating the GitHub star history for various frameworks over time. This image provides us with valuable insights into the trends and levels of popularity (indicated by the shape of the curve, particularly rapid increases) for these frameworks:
 
-![Star history graph for rendering frameworks](./star-history-rendering.png)
+![Star history graph for rendering frameworks](./star-history-rendering.webp)
 
 [Click here](https://star-history.com/#vercel/next.js&gatsbyjs/gatsby&nuxt/nuxt&meteor/meteor&withastro/astro&quasarframework/quasar&remix-run/remix&builderio/qwik&sveltejs/kit&Date) to view an updated graph based on the date you're reading this article (you will need to provide a GitHub token).
 
@@ -251,7 +251,7 @@ By utilizing [Star history](https://star-history.com/) we can generate an image 
 
 By utilizing [Google trends](https://trends.google.com/), we can generate an image that illustrates the search trends on Google. This image provides valuable insights into the relative popularity and interest over time for various frameworks based on search queries:
 
-![Google trends graph for rendering frameworks](./trends-rendering-en.png)
+![Google trends graph for rendering frameworks](./trends-rendering-en.webp)
 
 [Click here](https://trends.google.fr/trends/explore?date=today%205-y&q=%2Fg%2F11h4q9rcf3,%2Fg%2F11g0wgnhgc,%2Fg%2F11r9q51mg3&hl=en) to view an updated graph based on the date you're reading this article.
 
@@ -259,7 +259,7 @@ By utilizing [Google trends](https://trends.google.com/), we can generate an ima
 
 By referring to [npm trends](https://npmtrends.com/@angular/core-vs-@stencil/core-vs-alpinejs-vs-backbone-vs-lit-vs-preact-vs-react-vs-solid-js-vs-svelte-vs-vue), we can obtain the number of downloads for various frameworks, providing insights into their usage. The download statistics indicate the level of adoption and utilization for each framework:
 
-![npm trends graph for rendering frameworks](./npm-rendering.png)
+![npm trends graph for rendering frameworks](./npm-rendering.webp)
 
 [Click here](https://npmtrends.com/@builder.io/qwik-vs-@nguniversal/common-vs-@remix-run/node-vs-@sveltejs/kit-vs-astro-vs-gatsby-vs-marko-vs-next-vs-nuxt-vs-quasar) to view an updated graph based on the date you're reading this article.
 

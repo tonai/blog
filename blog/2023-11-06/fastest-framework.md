@@ -102,7 +102,7 @@ Now, let's shift our focus to the page size. In all these frameworks, the CSS, i
 
 Here is a chart illustrating these differences (sorted by total size):
 
-![Page size](./page-size-fsp.png)
+![Page size](./page-size-fsp.webp)
 
 Here are some notable points to consider:
 
@@ -141,7 +141,7 @@ Like in the previous scenario, the Lighthouse scores range from 80 to 83 with no
 
 Is it the same for the document and JavaScript sizes? Here is again a new chart illustrating these differences:
 
-![Page size](./page-size-pwli.png)
+![Page size](./page-size-pwli.webp)
 
 Here are some noteworthy observations:
 
@@ -311,7 +311,9 @@ The challenging aspect here is updating the application state and allowing the f
 
 Our goal is to effectively see the counter increase, as shown in this animation:
 
-![Counter animation](./counter.gif)
+<video className="video" controls>
+  <source src="/blog/video/counter.webm" type="video/webm" />
+</video>
 
 We also want to use the same technique for all frameworks to ensure a fair comparison. For example, it's not possible to use React's useEffect to trigger a new increment after rendering is complete.
 
@@ -319,11 +321,11 @@ One way to accomplish this is by using something like `setTimeout(increment, 0)`
 
 You can see this in the Google Devtools Performance tab record:
 
-![Performances with setTimeout](./setTimeout.png)
+![Performances with setTimeout](./setTimeout.webp)
 
 What we would like is something similar to the node setImmediate function. We can achieve a similar effect using MessageChannel. Here is the performance tab record demonstrating all the updates:
 
-![Performances with MessageChannel](./postMessage.png)
+![Performances with MessageChannel](./postMessage.webp)
 
 With this solution, we are now prepared to compare the reactivity of different frameworks.
 
