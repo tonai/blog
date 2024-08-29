@@ -19,6 +19,7 @@ import reactMinesweeper from "./images/react-minesweeper.webp";
 import reactNonogram from "./images/react-nonogram.webp";
 import reactPong from "./images/react-pong.webp";
 import reactTicTacToe from "./images/react-tictactoe.webp";
+import scribble from "./images/scribble.webp";
 import zombieGame from "./images/zombie-game.webp";
 
 export default function Games(): JSX.Element {
@@ -29,6 +30,28 @@ export default function Games(): JSX.Element {
     >
       <div className="container margin-vert--lg">
         <h1>Games</h1>
+        <Project
+          date="August 2024"
+          image={scribble}
+          links={[
+            {
+              link: "https://github.com/tonai/scribble",
+              type: "github",
+            },
+          ]}
+          techs={["Typescript", "Vue", "dusk", "Vite"]}
+          title="Scribble - dusk"
+        >
+          Multiplayer game developed with Dusk during the{" "}
+          <a href="https://developers.dusk.gg/blog/dusk-jam/">Dusk 1st Jam</a>{" "}
+          (ranked 1st).
+          <br />
+          Choose a word and made other players guess it by only using your
+          drawing skills.
+          <br />
+          The game is playable on the{" "}
+          <a href="https://join.rune.ai/game/x0lXLIxo-MgE">dusk</a> app.
+        </Project>
         <Project
           date="Mai 2024"
           image={jumperRace}
@@ -41,14 +64,15 @@ export default function Games(): JSX.Element {
           techs={["Typescript", "React", "Rapier", "dusk", "Vite"]}
           title="Jumper Race - dusk"
         >
-          Multiplayer game developed with Dusk (previously Rune) during the{" "}
+          Multiplayer game developed with Dusk during the{" "}
           <a href="https://spring-2024.reactjam.com/">Spring 2024 React Jam</a>{" "}
           (ranked 3rd).
           <br />
           Control a little blob and be the fastest to reach the end of each
           level.
           <br />
-          The game is playable on the <a href="https://dusk.gg/">dusk</a> app.
+          The game is playable on the{" "}
+          <a href="https://join.rune.ai/game/C928F89n-GAE">dusk</a> app.
         </Project>
         <Project
           date="January 2024"
@@ -62,14 +86,15 @@ export default function Games(): JSX.Element {
           techs={["Typescript", "React", "dusk", "Vite"]}
           title="Minors and Traitors - dusk"
         >
-          Multiplayer game developed with Dusk (previously Rune) during the{" "}
+          Multiplayer game developed with Dusk during the{" "}
           <a href="https://winter-2023.reactjam.com/">Winter 2023 React Jam</a>{" "}
           (ranked 3rd).
           <br />
           Turn based strategy game where you have to create a path to the gold,
           but one of you is a traitor.
           <br />
-          The game is playable on the <a href="https://dusk.gg/">dusk</a> app.
+          The game is playable on the{" "}
+          <a href="https://join.rune.ai/game/mSKFtSCC-1">dusk</a> app.
         </Project>
         <Project
           date="April 2023"

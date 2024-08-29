@@ -4,6 +4,7 @@ import clsx from "clsx";
 import styles from "./style.module.css";
 
 interface ILogoProps {
+  className?: string;
   Component?: ElementType;
   color?: string;
   isLogo: boolean;
@@ -13,6 +14,7 @@ interface ILogoProps {
 
 export default function Logo(props: ILogoProps) {
   const {
+    className = "",
     Component = "div",
     color = "var(--ifm-navbar-background-color)",
     isLogo,
@@ -22,14 +24,14 @@ export default function Logo(props: ILogoProps) {
 
   return (
     <div
-      className={clsx(styles.container, {
+      className={clsx(styles.container, className, {
         [styles.isLogo]: isLogo,
       })}
       style={
         {
           "--color": color,
           "--size": typeof size === "number" ? `${size}rem` : size,
-          "--fontSize": "calc(var(--size) / 18 * 3)", //${(size / 18) * 3}rem
+          "--fontSize": "calc(var(--size) / 18 * 3)",
         } as CSSProperties
       }
     >

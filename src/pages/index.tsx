@@ -30,9 +30,10 @@ export default function Home(): JSX.Element {
       <main className={styles.main}>
         <button className={styles.button} onClick={toggleBanner} type="button">
           <Logo
+            className="home-logo"
             Component="h1"
             isLogo={isLogo}
-            size="clamp(18rem, 20vw, 28rem)"
+            size="clamp(12rem, 28vw, 20rem)"
             tagline={siteConfig.tagline}
           />
         </button>

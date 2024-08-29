@@ -35,6 +35,15 @@ button {
   cursor: pointer;
 }
 
+.home-logo {
+  display: block !important;
+  margin: auto;
+}
+
+.footer__item {
+  height: 28px;
+}
+
 .center {
   text-align: center;
 }
@@ -81,4 +90,16 @@ button {
   [data-theme="dark"] .brand .github-icon path {
     fill: white;
   }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-equal > * {
+  flex: 1;
+}
+
+.mb {
+  margin-bottom: var(--ifm-leading);
 }

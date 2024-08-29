@@ -19,4 +19,5 @@
   justify-content: center;
   flex: 1;
   font-size: clamp(1rem, 1vw + 1rem, 1.3rem);
+  padding-top: var(--ifm-paragraph-margin-bottom);
 }
