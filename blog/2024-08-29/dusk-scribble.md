@@ -8,6 +8,8 @@ tags: [Frontend, Game development, Dusk]
 
 For the [Dusk 1st Jam](https://developers.dusk.gg/blog/dusk-jam), I developed a drawing guess game similar to [skribbl.io](https://skribbl.io/) in the [Dusk platform](https://dusk.gg/). Here is how I did it.
 
+<!--truncate-->
+
 But first why choosing a drawing guess game ?
 
 1. The jam theme was creativity, so letting the player draw freely seems to be matching

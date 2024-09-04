@@ -3,12 +3,12 @@ import Project from "@site/src/components/Project";
 
 import coloryage from "./images/coloryage/coloryage7.webp";
 import faceliftSaloon from "./images/facelift-saloon.webp";
-import jumperRace from "./images/jumper-race.webp";
+import jumperRace from "./images/jumper-race-2.png";
 import lasertank from "./images/lasertank.webp";
 import lasertank3 from "./images/lasertank3.webp";
 import lasertankJava from "./images/lasertank-java.webp";
 import lasertankUnity from "./images/lasertank-unity.webp";
-import minersAndTraitors from "./images/miners-and-traitors.webp";
+import minersAndTraitors from "./images/miners-and-traitors-2.png";
 import nhexReact from "./images/nhex-react.webp";
 import ninthKind from "./images/ninth-kind.webp";
 import react2048 from "./images/react-2048.webp";
@@ -19,7 +19,7 @@ import reactMinesweeper from "./images/react-minesweeper.webp";
 import reactNonogram from "./images/react-nonogram.webp";
 import reactPong from "./images/react-pong.webp";
 import reactTicTacToe from "./images/react-tictactoe.webp";
-import scribble from "./images/scribble.webp";
+import scribble from "./images/scribble-2.png";
 import zombieGame from "./images/zombie-game.webp";
 
 export default function Games(): JSX.Element {
