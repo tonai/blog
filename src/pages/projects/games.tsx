@@ -2,13 +2,14 @@ import Layout from "@theme/Layout";
 import Project from "@site/src/components/Project";
 
 import coloryage from "./images/coloryage/coloryage7.webp";
+import drawPhone from "./images/draw-phone.webp";
 import faceliftSaloon from "./images/facelift-saloon.webp";
-import jumperRace from "./images/jumper-race-2.png";
+import jumperRace from "./images/jumper-race-2.webp";
 import lasertank from "./images/lasertank.webp";
 import lasertank3 from "./images/lasertank3.webp";
 import lasertankJava from "./images/lasertank-java.webp";
 import lasertankUnity from "./images/lasertank-unity.webp";
-import minersAndTraitors from "./images/miners-and-traitors-2.png";
+import minersAndTraitors from "./images/miners-and-traitors-2.webp";
 import nhexReact from "./images/nhex-react.webp";
 import ninthKind from "./images/ninth-kind.webp";
 import react2048 from "./images/react-2048.webp";
@@ -19,7 +20,7 @@ import reactMinesweeper from "./images/react-minesweeper.webp";
 import reactNonogram from "./images/react-nonogram.webp";
 import reactPong from "./images/react-pong.webp";
 import reactTicTacToe from "./images/react-tictactoe.webp";
-import scribble from "./images/scribble-2.png";
+import scribble from "./images/scribble-2.webp";
 import zombieGame from "./images/zombie-game.webp";
 
 export default function Games(): JSX.Element {
@@ -30,6 +31,27 @@ export default function Games(): JSX.Element {
     >
       <div className="container margin-vert--lg">
         <h1>Games</h1>
+        <Project
+          date="August 2024"
+          image={drawPhone}
+          links={[
+            {
+              link: "https://github.com/tonai/draw-phone",
+              type: "github",
+            },
+          ]}
+          techs={["Typescript", "Vue", "dusk", "Vite"]}
+          title="Draw Phone - dusk"
+        >
+          Multiplayer game developed with Dusk.
+          <br />
+          Alternate between drawing sentences and describing drawings, and
+          discover all the sequences with everyone at the end and have fun
+          together!
+          <br />
+          The game is playable on the{" "}
+          <a href="https://join.rune.ai/game/xLgFE6t7-RQE">dusk</a> app.
+        </Project>
         <Project
           date="August 2024"
           image={scribble}
@@ -46,7 +68,7 @@ export default function Games(): JSX.Element {
           <a href="https://developers.dusk.gg/blog/dusk-jam/">Dusk 1st Jam</a>{" "}
           (ranked 1st).
           <br />
-          Choose a word and made other players guess it by only using your
+          Choose a word and make other players guess it by only using your
           drawing skills.
           <br />
           The game is playable on the{" "}
@@ -68,8 +90,8 @@ export default function Games(): JSX.Element {
           <a href="https://spring-2024.reactjam.com/">Spring 2024 React Jam</a>{" "}
           (ranked 3rd).
           <br />
-          Control a little blob and be the fastest to reach the end of each
-          level.
+          Control a little jumping blob and be the fastest to reach the end of
+          each level.
           <br />
           The game is playable on the{" "}
           <a href="https://join.rune.ai/game/C928F89n-GAE">dusk</a> app.
@@ -90,8 +112,8 @@ export default function Games(): JSX.Element {
           <a href="https://winter-2023.reactjam.com/">Winter 2023 React Jam</a>{" "}
           (ranked 3rd).
           <br />
-          Turn based strategy game where you have to create a path to the gold,
-          but one of you is a traitor.
+          A cooperative board game. Build a path to the gold, try to be the
+          first one for more points, but beware, one of you may be a traitor.
           <br />
           The game is playable on the{" "}
           <a href="https://join.rune.ai/game/mSKFtSCC-1">dusk</a> app.
