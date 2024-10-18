@@ -10,6 +10,7 @@ import lasertank3 from "./images/lasertank3.webp";
 import lasertankJava from "./images/lasertank-java.webp";
 import lasertankUnity from "./images/lasertank-unity.webp";
 import minersAndTraitors from "./images/miners-and-traitors-2.webp";
+import neonTetromino from "./images/neon-tetromino.webp";
 import nhexReact from "./images/nhex-react.webp";
 import ninthKind from "./images/ninth-kind.webp";
 import react2048 from "./images/react-2048.webp";
@@ -31,6 +32,45 @@ export default function Games(): JSX.Element {
     >
       <div className="container margin-vert--lg">
         <h1>Games</h1>
+        {/* <Project
+          date="September 2024"
+          image={poker}
+          links={[
+            {
+              link: "https://github.com/tonai/poker",
+              type: "github",
+            },
+          ]}
+          techs={["Typescript", "Vue", "dusk", "Vite"]}
+          title="Poker - dusk"
+        >
+          Multiplayer game developed with Dusk.
+          <br />
+          Classic No-Limit Texas Hold'em Poker game.
+          <br />
+          The game is playable on the{" "}
+          <a href="https://join.rune.ai/game/xLgFE6t7-RQE">dusk</a> app.
+        </Project> */}
+        <Project
+          date="September 2024"
+          image={neonTetromino}
+          links={[
+            {
+              link: "https://github.com/tonai/poker",
+              type: "github",
+            },
+          ]}
+          techs={["Typescript", "React", "dusk", "Vite"]}
+          title="Neon Tetromino - dusk"
+        >
+          Multiplayer game developed with Dusk during the{" "}
+          <a href="https://reactjam.com/">Fall 2024 React Jam</a>.
+          <br />
+          Battle your friends in this classic puzzle game or play solo.
+          <br />
+          The game is playable on the{" "}
+          <a href="https://join.rune.ai/game/T4ORhSFJ-XAE">dusk</a> app.
+        </Project>
         <Project
           date="August 2024"
           image={drawPhone}
