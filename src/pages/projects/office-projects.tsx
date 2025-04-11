@@ -2,6 +2,9 @@ import Layout from "@theme/Layout";
 
 import Project from "@site/src/components/Project";
 
+import ign from "./images/ign.webp";
+// import amc from "./images/amc.webp";
+// import crt from "./images/crt.webp";
 import afibel from "./images/afibel.webp";
 import ahp from "./images/ahp.webp";
 import airbus from "./images/airbus.webp";
@@ -43,6 +46,31 @@ export default function OsProjects(): JSX.Element {
     >
       <div className="container margin-vert--lg">
         <h1>Office Projects</h1>
+        <Project
+          date="November 2024"
+          image={ign}
+          links={[{ link: "https://cartes.gouv.fr/" }]}
+          techs={["Typescript", "React", "Symfony", "Vite"]}
+          title="cartes.gouv.fr"
+        >
+          Expert support and development for the IGN website.
+        </Project>
+        {/* <Project
+          date="October 2024"
+          image={amc}
+          techs={["Typescript", "Next", "React", "NestJS", "Drupal"]}
+          title="ArcelorMittal Construction"
+        >
+          Expert support for the development of the ArcelorMittal Construction PWA app.
+        </Project>
+        <Project
+          date="July 2024"
+          image={crt}
+          techs={["Typescript", "Next", "React", "Strapi"]}
+          title="Hauts-de-France Tourisme"
+        >
+          Expert support for the development of the new North of France tourism website.
+        </Project> */}
         <Project
           date="February 2024"
           image={airbus}

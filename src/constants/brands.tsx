@@ -13,6 +13,7 @@ import SailsIcon from "../components/Icons/Sails";
 import ExpressIcon from "../components/Icons/ExpressIcon";
 import SocketIOIcon from "../components/Icons/SockeIOIcon";
 import GitHubIcon from "../components/Icons/GithubIcon";
+import StrapiIcon from "../components/Icons/StrapiIcon";
 
 export const technologies = {
   Angular: (
@@ -307,6 +308,11 @@ export const technologies = {
   "Socket.IO": (
     <div className="brand">
       <SocketIOIcon />
+    </div>
+  ),
+  Strapi: (
+    <div className="brand">
+      <StrapiIcon />
     </div>
   ),
   Storybook: (
